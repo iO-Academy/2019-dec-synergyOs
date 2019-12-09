@@ -10,7 +10,7 @@ class AppBtn extends React.Component {
 
         return (
             <div>
-                <img onClick={()=> showApps()} className='appBtn' src={circle}/>
+                <img onClick={()=> showApps()} className='appBtn' src={circle} alt='app list'/>
             </div>
     )}
 }
