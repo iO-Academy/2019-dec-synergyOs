@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import TestApp from './Apps/TestApp'
 
 class Desktop extends Component {
 
@@ -18,7 +19,7 @@ class Desktop extends Component {
     render() {
         return(
             <div className='desktop' style={this.styles}>
-
+                <TestApp name="test" currentApps={this.props.currentApps} closeApp={this.props.closeApp}/>
             </div>
         )
     }
