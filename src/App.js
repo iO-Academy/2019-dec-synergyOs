@@ -4,6 +4,7 @@ import MenuBar from './Components/MenuBar'
 import Desktop from './Components/Desktop/Desktop';
 import logo from './Images/synergyoslogo.png';
 import { AppContext } from './AppStateContext';
+import { array } from 'prop-types';
 
 class App extends Component {
   constructor(props) {
@@ -21,8 +22,15 @@ class App extends Component {
     })
   }
 
-  
-
+  setAppClosed = (appName) => {
+    let currentState = this.state
+    currentState.openApps.forEach((app, index) => {
+      if(app === appName) {
+        currentState.openApps.splice(index, 1);
+      }
+    })
+    this.setState(currentState)
+  }
 
   render() {
     return (
