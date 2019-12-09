@@ -1,6 +1,6 @@
 import React from 'react'
-import fullscreenOpen from '../../../public/fullscreenOpen.png'
-import fullscreenClose from '../../../public/fullscreenClose.png'
+import fullscreenClose from '../../Images/fullscreenClose.png'
+import fullscreenOpen from '../../Images/fullscreenOpen.png'
 
 const toggleFullscreen = () => {
     if (document.fullscreenEnabled) {
