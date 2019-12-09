@@ -5,8 +5,11 @@ import Desktop from './Components/Desktop/Desktop';
 
 function App() {
   return (
-    <Desktop background='#D8AEB6'/>
-    <MenuBar />
+    <div>
+      <Desktop background='#D8AEB6'/>
+      <MenuBar />
+    </div>
+    
   );
 }
 
