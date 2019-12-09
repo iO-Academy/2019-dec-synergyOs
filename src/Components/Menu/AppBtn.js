@@ -5,7 +5,7 @@ class AppBtn extends React.Component {
     render(){
 
         const showApps = () => {
-            console.log('Click');
+            console.log('View apps');
           } 
 
         return (
