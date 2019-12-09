@@ -12,3 +12,7 @@
 .menuClock {
     float: left;
 }
+
+.menuAppBtn {
+    float: right;
+}
