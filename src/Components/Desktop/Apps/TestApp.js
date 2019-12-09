@@ -61,7 +61,7 @@ class TestApp extends React.Component {
     render(){
         return (
             <div className={'app ' + this.state.visibility}>
-                <div className="topBar" onMouseDown={e => this.dragApp(e.target)}>
+                <div className="topBar" onPointerDown={e => this.dragApp(e.target)}>
                     <button onClick={() => this.props.closeApp(this.props.name)}>X</button>
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
