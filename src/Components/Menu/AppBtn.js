@@ -1,10 +1,17 @@
 import React from 'react'
+import circle from '../../res/circle.svg'
 
 class AppBtn extends React.Component {
-
     render(){
+
+        const showApps = () => {
+            console.log('Click');
+          } 
+
         return (
-            <button>Hello</button>
+            <div>
+                <img onClick={()=> showApps()} className='appBtn' src={circle}/>
+            </div>
     )}
 }
 

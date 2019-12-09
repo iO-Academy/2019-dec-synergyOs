@@ -16,3 +16,8 @@
 .menuAppBtn {
     float: right;
 }
+
+.appBtn{
+    transform: scale(1.5);
+    stroke: slateblue;
+}
