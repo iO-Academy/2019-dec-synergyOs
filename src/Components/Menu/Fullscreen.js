@@ -1,6 +1,6 @@
 import React from 'react'
-import fullscreenClose from '../../Images/fullscreenClose.png'
-import fullscreenOpen from '../../Images/fullscreenOpen.png'
+import fullscreenClose from '../../Images/fullscreenClose.svg'
+import fullscreenOpen from '../../Images/fullscreenOpen.svg'
 
 const root = document.getElementById('root')
 
@@ -16,12 +16,10 @@ const toggleFullscreen = () => {
         }
 }
 
-
 const Fullscreen = () => {
 
     return (
         <img id="fullscreenButton" src={fullscreenOpen} onClick={toggleFullscreen} />
-
     )
 }
 
