@@ -8,6 +8,7 @@ function MenuBar() {
         <div className="MenuBar">
             <Fullscreen/>
             <div className='menuClock'><Clock /></div>
+            <h1>CHANGE ICON TO SVG</h1>
         </div>
     )
 }
