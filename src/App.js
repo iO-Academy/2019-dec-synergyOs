@@ -1,6 +1,7 @@
-import React from 'react';
-import './App.css';
-import MenuBar from './Components/MenuBar';
+
+import React from 'react'
+import './App.css'
+import MenuBar from './Components/MenuBar'
 
 function App() {
   return (
@@ -10,4 +11,4 @@ function App() {
   )
 }
 
-export default App;
+export default App
