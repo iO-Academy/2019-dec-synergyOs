@@ -1,6 +1,7 @@
 import React from 'react';
 import './MenuBar.css';
 import Clock from './Menu/Clock'
+import AppBtn from './Menu/AppBtn'
 import Fullscreen from "./Menu/Fullscreen";
 
 function MenuBar() {
@@ -8,6 +9,7 @@ function MenuBar() {
         <div className="MenuBar">
             <Fullscreen/>
             <div className='menuClock'><Clock /></div>
+            <div className='menuAppBtn'><AppBtn /></div>
         </div>
     )
 }

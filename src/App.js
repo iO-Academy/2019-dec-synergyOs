@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import MenuBar from './Components/MenuBar'
 import Desktop from './Components/Desktop/Desktop';
-import logo from './Images/synergyoslogo.png';
+import logo from './res/synergyoslogo.png';
 
 class App extends Component {
   constructor(props) {

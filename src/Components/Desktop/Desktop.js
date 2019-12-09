@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import TestApp from './Apps/TestApp'
+import AppList from '../Menu/AppList'
 
 class Desktop extends Component {
 
@@ -20,6 +21,7 @@ class Desktop extends Component {
         return(
             <div className='desktop' style={this.styles}>
                 <TestApp name="test" currentApps={this.props.currentApps} closeApp={this.props.closeApp}/>
+                <AppList />
             </div>
         )
     }
