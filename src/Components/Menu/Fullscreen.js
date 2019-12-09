@@ -1,9 +1,28 @@
 import React from 'react'
-import logo from "../../../../Ex1createReactApp/testapp/src/logo.svg";
+import fullscreenOpen from '../../../public/fullscreenOpen.png'
+import fullscreenClose from '../../../public/fullscreenClose.png'
+
+const toggleFullscreen = () => {
+    if (document.fullscreenEnabled) {
+        document.exitFullscreen()
+            .then(()=>{
+                document.getElementById('fullscreenButton').src=fullscreenOpen
+            })
+    } else {
+        document.getElementById('root').requestFullscreen()
+            .then(()=>{
+            document.getElementById('fullscreenButton').src=fullscreenClose
+        })
+    }
+};
+
 
 const Fullscreen = () => {
+
+
     return (
-        <h1 align="center" onClick={this.handleClick}>Click me!</h1>
+        <img id="fullscreenButton" src={fullscreenOpen} onClick={toggleFullscreen} />
+
     )
 }
 
