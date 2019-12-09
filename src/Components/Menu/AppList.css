@@ -1,0 +1,27 @@
+.AppList{
+    border: 2px solid black;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.712);
+    position: fixed;
+    right: 0;
+    bottom: 51px;
+    margin: 5px;
+
+    visibility: visible;
+
+}
+
+.AppListInternal {
+    padding: 0;
+}
+
+.AppListHeader {
+    background-color: rgb(162, 163, 236);
+    border-bottom: 2px solid black;
+
+}
+
+.AppListItem {
+    padding: 5px 7px;
+    list-style: none;
+}
