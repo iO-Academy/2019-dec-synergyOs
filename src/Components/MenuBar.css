@@ -3,7 +3,12 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.85);
     color: white;
-    text-align: center;
+    margin: 0;
+    padding: 15px;
+}
+
+.menuClock {
+    float: left;
 }
