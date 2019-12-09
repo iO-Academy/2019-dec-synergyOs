@@ -6,7 +6,6 @@ function MenuBar() {
   return (
     <div className="MenuBar">
         <Fullscreen/>
-      <h1>add menu components here</h1>
     </div>
   )
 }
