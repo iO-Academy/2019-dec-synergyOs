@@ -20,7 +20,7 @@ const toggleFullscreen = () => {
 const Fullscreen = () => {
 
     return (
-        <img id="fullscreenButton" height="100px" src={fullscreenOpen} onClick={toggleFullscreen} />
+        <img id="fullscreenButton" height="50px" src={fullscreenOpen} onClick={toggleFullscreen} />
 
     )
 }
