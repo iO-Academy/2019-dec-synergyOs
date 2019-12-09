@@ -1,6 +1,6 @@
 import React from 'react'
-import fullscreenClose from '../../Images/fullscreenClose.svg'
-import fullscreenOpen from '../../Images/fullscreenOpen.svg'
+import fullscreenClose from '../../res/fullscreenClose.svg'
+import fullscreenOpen from '../../res/fullscreenOpen.svg'
 
 const root = document.getElementById('root')
 
