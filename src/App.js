@@ -4,7 +4,7 @@ import Desktop from './Components/Desktop/Desktop';
 
 function App() {
   return (
-    <Desktop background='#000000'/>
+    <Desktop background='#D8AEB6'/>
   );
 }
 
