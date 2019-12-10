@@ -1,27 +1,25 @@
 import React, { Component } from 'react';
 import './AppList.css'
 
-import About from '../../res/icons/about.svg'
-import Giphy from '../../res/icons/giphy.png'
+import AboutIcon from '../../res/icons/about.svg'
+import GiphyIcon from '../../res/icons/giphy.png'
 
 class AppList extends Component {
+
+    appIcons = {
+        About: AboutIcon,
+        Giphy: GiphyIcon
+    }
+
     render() {
 
         let iconPath = ''
         const apps = Object.getOwnPropertyNames(this.props.appData.currentApps)
         apps.forEach(element => {
-            switch (element) {
-                case 'About':
-                    iconPath = About
-                    break;
-
-                case 'Giphy':
-                    iconPath = Giphy
-                    break;
-
-                default:
-                    iconPath = About
-                    break;
+            if(this.appIcons.hasOwnProperty(element)) {
+                iconPath = this.appIcons[element]
+            } else {
+                iconPath = this.appIcons['About']
             }
         });
 
