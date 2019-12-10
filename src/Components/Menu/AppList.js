@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import './AppList.css'
 
 class AppList extends Component {
+    constructor(props){
+        super(props)
+
+        let test = this.props.appData
+        console.log(test);
+        
+    }
+
     render() {
         return (
             
