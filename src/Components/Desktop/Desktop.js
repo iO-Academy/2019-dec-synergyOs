@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import AboutApp from './Apps/AboutApp'
 import AppList from '../Menu/AppList'
+import './Apps/Apps.css'
 
 class Desktop extends Component {
     constructor(props) {

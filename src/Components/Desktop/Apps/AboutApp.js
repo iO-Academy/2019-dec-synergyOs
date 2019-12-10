@@ -11,7 +11,6 @@ class TestApp extends React.Component {
     constructor(props) {
         super(props)
         let appName = this.props.name
-        console.log(this.props.desktopState.currentApps[appName])
         this.state = {
             name: appName,
             visibility: this.props.desktopState.currentApps[appName],
@@ -58,7 +57,6 @@ class TestApp extends React.Component {
                 }}>
                     <button onClick={() => {
                         this.props.desktopState.closeApp(this.state.name);
-                        console.log(this.state.name)
                     }}>X
                     </button>
                     <div className="divider"></div>
