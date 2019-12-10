@@ -2,24 +2,22 @@ import React, { Component } from 'react';
 import './AppList.css'
 
 class AppList extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
-
-        let test = this.props.appData
-        console.log(test);
-        
     }
 
     render() {
+        const apps = Object.getOwnPropertyNames(this.props.appData.currentApps)
+        const listItems = apps.map((appName) =>
+            <li className='AppListItem'>{appName}</li>
+        )
+
         return (
-            
+
             <div className="AppList">
                 <ul className='AppListInternal'>
                     <li className='AppListHeader AppListItem' >My Apps</li>
-                    <li className='AppListItem' >app 1</li>
-                    <li className='AppListItem' >app 2</li>
-                    <li className='AppListItem' >app 3</li>
-                    <li className='AppListItem' >app 4</li>
+                    {listItems}
                 </ul>
             </div>
         )
