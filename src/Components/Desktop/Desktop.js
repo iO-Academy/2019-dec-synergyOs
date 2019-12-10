@@ -17,7 +17,7 @@ class Desktop extends Component {
     }
 
     render() {
-        let desktopState = this.props
+        let desktopState = this.props.appState
         return(
             <div className='desktop' style={this.styles}>
                 <TestApp name="test" desktopState={desktopState} />

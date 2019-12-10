@@ -13,7 +13,8 @@ class App extends Component {
         test: 'open',
         test2: 'open'
       },
-      activeApp: ''
+      activeApp: '',
+      currentZ: '1'
     }
   }
 
@@ -32,17 +33,26 @@ class App extends Component {
   setAppActive = (appName) => {
     let currentState = this.state
     currentState.activeApp = appName
+    currentState.currentZ++
     this.setState(currentState)
+    return(currentState.currentZ)
   }
 
   render() {
+
+    let appState = {
+      currentApps: this.state.apps,
+      activeApp: this.state.activeApp,
+      openApp: this.setAppOpen,
+      closeApp: this.setAppClosed,
+      activateApp: this.setAppActive,
+      currentZ: this.state.currentZ
+    }
+
     return (
       <div>
 
-          <Desktop background='#D8AEB6' backgroundImg={logo} appState={this.state}
-          currentApps={this.state.apps} activeApp={this.state.activeApp} 
-          openApp={this.setAppOpen} closeApp={this.setAppClosed} a
-          ctivateApp={this.setAppActive} />
+          <Desktop background='#D8AEB6' backgroundImg={logo} appState={appState} />
 
           <MenuBar currentApps={this.state.apps} openApp={this.setAppOpen}/>
       </div>
