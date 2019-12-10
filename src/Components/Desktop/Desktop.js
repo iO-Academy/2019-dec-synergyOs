@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import AppList from '../Menu/AppList'
 
 class Desktop extends Component {
-
     constructor(props) {
         super(props)
         this.styles = {
@@ -17,12 +16,12 @@ class Desktop extends Component {
     }
 
     render() {
-        let desktopState = this.props
+        let desktopState = this.props.appState
         return(
             <div className='desktop' style={this.styles}>
                 <TestApp name="test" desktopState={desktopState} />
                 <TestApp name="test2" desktopState={desktopState} />
-                <AppList />
+                <AppList appData={desktopState} />
             </div>
         )
     }
