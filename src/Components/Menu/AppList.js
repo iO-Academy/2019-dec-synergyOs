@@ -2,18 +2,13 @@ import React, { Component } from 'react';
 import './AppList.css'
 
 class AppList extends Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         const apps = Object.getOwnPropertyNames(this.props.appData.currentApps)
         const listItems = apps.map((appName) =>
-            <li className='AppListItem'>{appName}</li>
+            <li className='AppListItem AppListHover'>{appName}</li>
         )
 
         return (
-
             <div className="AppList">
                 <ul className='AppListInternal'>
                     <li className='AppListHeader AppListItem' >My Apps</li>
