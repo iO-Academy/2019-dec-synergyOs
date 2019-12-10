@@ -2,7 +2,6 @@ import React from "react";
 import '../Apps.css'
 import dragApp from '../AppDragger'
 import resizeApp from '../AppResizer'
-import {throwStatement} from "@babel/types";
 import './Giphy.css'
 
 class GiphyApp extends React.Component {
