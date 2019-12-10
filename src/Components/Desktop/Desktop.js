@@ -3,6 +3,7 @@ import AboutApp from './Apps/About/AboutApp'
 import AppList from '../Menu/AppList'
 import './Apps/Apps.css'
 import GiphyApp from './Apps/Giphy/Giphy'
+import Music from './Apps/Music/Music'
 
 class Desktop extends Component {
     constructor(props) {
@@ -42,6 +43,7 @@ class Desktop extends Component {
             <div scroll="no" className='desktop' style={this.styles}>
                 <AboutApp name="About" desktopState={desktopState}/>
                 <GiphyApp name="Giphy" desktopState={desktopState}/>
+                <Music name="Music" desktopState={desktopState} />
                 <AppList appData={desktopState}/>
             </div>
         )
