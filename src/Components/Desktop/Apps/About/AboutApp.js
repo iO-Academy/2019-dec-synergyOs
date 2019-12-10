@@ -1,16 +1,18 @@
 import React from "react";
 import './AboutApp.css'
-import dragApp from './'
-import resizeApp from './AppResizer'
+import dragApp from '../AppDragger'
+import resizeApp from '../AppResizer'
 
-import alex from '../../../res/headshots/alex.png'
-import anton from '../../../res/headshots/anton.png'
-import josh from '../../../res/headshots/josh.png'
+
+import alex from '../../../../res/headshots/alex.png'
+import anton from '../../../../res/headshots/anton.png'
+import josh from '../../../../res/headshots/josh.png'
 
 class TestApp extends React.Component {
     constructor(props) {
         super(props)
         let appName = this.props.name
+        console.log(this.props.desktopState.currentApps[appName])
         this.state = {
             name: appName,
             visibility: this.props.desktopState.currentApps[appName],
@@ -48,7 +50,10 @@ class TestApp extends React.Component {
         app.style.zIndex = zIndex
     }
 
-    render() {
+    render(){
+
+        let appMinWidths = {minWidth: '100px', minHeight: '100px'}
+
         return (
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
                  style={this.style}>
@@ -57,13 +62,14 @@ class TestApp extends React.Component {
                 }}>
                     <button onClick={() => {
                         this.props.desktopState.closeApp(this.state.name);
+                        console.log(this.state.name)
                     }}>X
                     </button>
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
 
-                <div className="app-content aboutAppContainer">
+                <div className="app-content aboutContent" style={appMinWidths}>
                     <h1>SynergyOS</h1>
                     <p>v0.3</p>
                     <div className='aboutContactBoxWrapper'>

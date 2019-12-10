@@ -45,7 +45,11 @@ class TestApp extends React.Component {
         app.style.zIndex = zIndex
     }
 
-    render() {
+    render(){
+
+        let appMinWidths = {minWidth: '100px', minHeight: '100px'}
+
+
         return (
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
                  style={this.style}>
@@ -60,7 +64,7 @@ class TestApp extends React.Component {
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
-                <div className="app-content">
+                <div className="app-content" style={appMinWidths}>
                     <h1>TestApp</h1>
                     <p>i am some text</p>
                 </div>
