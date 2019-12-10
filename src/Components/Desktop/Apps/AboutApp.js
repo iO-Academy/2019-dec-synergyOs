@@ -64,7 +64,7 @@ class TestApp extends React.Component {
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
-                <div className="aboutContent">
+                <div className="app-content aboutContent">
                     <h1>SynergyOS</h1>
                     <p>v0.3</p>
                     <div className='aboutContact'>
