@@ -10,13 +10,19 @@ class TestApp extends React.Component {
             name: appName,
             visibility: this.props.desktopState.currentApps[appName],
         }
+
+        this.style = {
+            top: Math.floor(Math.random() * window.innerHeight / 2),
+            left: Math.floor(Math.random() * window.innerWidth / 2)
+        }
+    
     }
 
     componentDidUpdate(prevProps) {
         console.log(this.props.desktopState.currentApps[this.state.name])
         if(prevProps !== this.props) {
             this.setState({
-                name: "test",
+                name: this.state.name,
                 visibility: this.props.desktopState.currentApps[this.state.name],
             })
         }
@@ -58,13 +64,11 @@ class TestApp extends React.Component {
           }
     }
 
-    
-
     render(){
         return (
-            <div id={this.state.name} className={'app ' + this.state.visibility}>
+            <div id={this.state.name} className={'app ' + this.state.visibility} style={this.style}>
                 <div className="topBar" onPointerDown={e => this.dragApp(e.target)}>
-                    <button onClick={() => this.props.desktopState.closeApp(this.state.name)}>X</button>
+                    <button onClick={() => {this.props.desktopState.closeApp(this.state.name); console.log(this.state.name)}}>X</button>
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>

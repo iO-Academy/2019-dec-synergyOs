@@ -21,6 +21,7 @@ class Desktop extends Component {
         return(
             <div className='desktop' style={this.styles}>
                 <TestApp name="test" desktopState={desktopState} />
+                <TestApp name="test2" desktopState={desktopState} />
             </div>
         )
     }

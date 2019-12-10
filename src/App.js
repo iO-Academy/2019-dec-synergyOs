@@ -10,7 +10,8 @@ class App extends Component {
 
     this.state = {
       apps: {
-        test: 'open'
+        test: 'open',
+        test2: 'open'
       },
       activeApp: ''
     }
