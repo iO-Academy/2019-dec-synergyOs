@@ -1,7 +1,6 @@
 .app {
     background-color: #ffffff;
     position: absolute;
-    overflow: scroll;
     border: 2px solid #000000;
     box-shadow: 2.5px 2.5px #00000062;
     overflow: hidden;
@@ -35,7 +34,8 @@
   }
 
   .app-content {
-    margin: 10px
+    margin: 0;
+    overflow: scroll
   }
 
 .app-statusBar {
@@ -57,7 +57,6 @@
 /* about app */
 .aboutContent{
   text-align: center;
-  margin: 20px;
 }
 
 .aboutContact{

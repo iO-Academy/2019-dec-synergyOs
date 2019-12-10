@@ -34,7 +34,8 @@ class Desktop extends Component {
             backgroundRepeat: `no-repeat`,
             backgroundAttachment: `fixed`,
             backgroundPosition: `center`,
-            backgroundSize: '50%'
+            backgroundSize: '50%',
+            overflow: 'hidden'
         }
         return(
             <div scroll="no" className='desktop' style={this.styles}>
