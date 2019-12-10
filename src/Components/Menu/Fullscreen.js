@@ -8,17 +8,25 @@ const root = document.getElementById('root')
 const toggleFullscreen = () => {
 
     screenfull.toggle(root);
-    if (document.getElementById('fullscreenButton').src = fullscreenOpen) {
-        document.getElementById('fullscreenButton').src = fullscreenClose
-    } else {
-        document.getElementById('fullscreenButton').src = fullscreenOpen
+        if ()
     }
+
+
+    if (document.webkitIsFullScreen) {
+        console.log('hello')
+        document.webkitExitFullscreen()
+        document.getElementById('fullscreenButton').src=fullscreenOpen
+    } else {
+        console.log('goodbye')
+        root.webkitRequestFullscreen()
+        document.getElementById('fullscreenButton').src=fullscreenClose
+        }
 }
 
 const Fullscreen = () => {
 
     return (
-        <img id="fullscreenButton" src={fullscreenOpen} onClick={toggleFullscreen}/>
+        <img id="fullscreenButton" src={fullscreenOpen} onClick={toggleFullscreen} />
     )
 }
 
