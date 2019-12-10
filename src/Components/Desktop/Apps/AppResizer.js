@@ -1,7 +1,7 @@
 function resizeApp(target, activateApp) {
     activateApp()
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0
-    
+
     target.onmousedown = dragMouseDown;
     console.log(target.parentElement)
     let elmnt = target.parentElement.querySelector('.app-content')
@@ -32,7 +32,7 @@ function resizeApp(target, activateApp) {
         // stop moving when mouse button is released:
         document.onmouseup = null;
         document.onmousemove = null;
-      }
+    }
 }
 
 module.exports = resizeApp 
