@@ -17,6 +17,8 @@ class TestApp extends React.Component {
             top: Math.floor(Math.random() * window.innerHeight / 2),
             left: Math.floor(Math.random() * window.innerWidth / 2)
         }
+
+        this.props.desktopState.closeApp(appName)
     
     }
 
