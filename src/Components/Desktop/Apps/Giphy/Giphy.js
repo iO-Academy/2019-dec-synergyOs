@@ -52,7 +52,6 @@ class GiphyApp extends React.Component {
         fetch("http://api.giphy.com/v1/gifs/random?api_key=cG6pIvcb28OdKIy6mEkrpuUzuOpRKHDC", {method: 'get'})
             .then(res => res.json())
             .then(res => {
-                console.log(res)
                 let currentState = this.state
                 currentState.gifUrl = res.data.images.downsized.url
                 this.setState(currentState)
@@ -68,7 +67,6 @@ class GiphyApp extends React.Component {
                 }}>
                     <button onClick={() => {
                         this.props.desktopState.closeApp(this.state.name);
-                        console.log(this.state.name)
                     }}>X
                     </button>
                     <div className="divider"></div>
