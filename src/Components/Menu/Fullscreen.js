@@ -3,8 +3,6 @@ import screenfull from 'screenfull'
 import fullscreenClose from '../../res/fullscreenClose.svg'
 import fullscreenOpen from '../../res/fullscreenOpen.svg'
 
-const root = document.getElementById('root')
-
 const toggleFullscreen = () => {
 
     if (screenfull.isFullscreen) {
@@ -12,7 +10,7 @@ const toggleFullscreen = () => {
         screenfull.exit()
     } else {
         document.getElementById('fullscreenButton').src = fullscreenClose
-        screenfull.request(root)
+        screenfull.request()
     }
 }
 

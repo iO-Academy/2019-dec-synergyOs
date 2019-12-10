@@ -3,8 +3,8 @@ function resizeApp(target, activateApp) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0
 
     target.onmousedown = dragMouseDown;
-    console.log(target.parentElement)
     let elmnt = target.parentElement.querySelector('.app-content')
+    console.log(target.parentElement.querySelector('.app-content'))
 
     function dragMouseDown(e) {
         e = e || window.event;
@@ -26,13 +26,32 @@ function resizeApp(target, activateApp) {
         // set the element's new position:
         elmnt.style.height = (elmnt.offsetHeight - pos2) + "px";
         elmnt.style.width = (elmnt.offsetWidth - pos1) + "px";
+
+        console.log(elmnt.offsetWidth)
+
+        if (elmnt.offsetWidth < 100) {
+            elmnt.offsetWidth = 100
+        }
+
+        if (elmnt.offsetHeight < 100) {
+            elmnt.offsetHeight = 100
+        }
     }
 
     function closeDragElement() {
         // stop moving when mouse button is released:
         document.onmouseup = null;
         document.onmousemove = null;
+
+        if (elmnt.offsetWidth < 100) {
+            elmnt.style.width = 100
+        }
+
+        if (elmnt.offsetHeight < 100) {
+            elmnt.style.height = 100
+        }
     }
+
 }
 
 module.exports = resizeApp 

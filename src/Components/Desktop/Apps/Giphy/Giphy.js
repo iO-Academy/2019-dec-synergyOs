@@ -1,19 +1,19 @@
 import React from "react";
-import './AboutApp.css'
-import dragApp from './'
-import resizeApp from './AppResizer'
+import '../Apps.css'
+import dragApp from '../AppDragger'
+import resizeApp from '../AppResizer'
+import './Giphy.css'
 
-import alex from '../../../res/headshots/alex.png'
-import anton from '../../../res/headshots/anton.png'
-import josh from '../../../res/headshots/josh.png'
+class GiphyApp extends React.Component {
 
-class TestApp extends React.Component {
     constructor(props) {
         super(props)
+        this.getRandomGif()
         let appName = this.props.name
         this.state = {
             name: appName,
             visibility: this.props.desktopState.currentApps[appName],
+            gifUrl: ""
         }
 
         this.style = {
@@ -31,6 +31,8 @@ class TestApp extends React.Component {
                 name: this.state.name,
                 visibility: this.props.desktopState.currentApps[this.state.name],
             })
+
+            this.getRandomGif()
         }
 
         let app = document.getElementById(this.state.name)
@@ -48,7 +50,20 @@ class TestApp extends React.Component {
         app.style.zIndex = zIndex
     }
 
+    getRandomGif = () => {
+        fetch("http://api.giphy.com/v1/gifs/random?api_key=cG6pIvcb28OdKIy6mEkrpuUzuOpRKHDC", {method: 'get'})
+            .then(res => res.json())
+            .then(res => {
+                let currentState = this.state
+                currentState.gifUrl = res.data.images.downsized.url
+                this.setState(currentState)
+            })
+    }
+
     render() {
+
+        let appMinWidths = {minWidth: '100px', minHeight: '100px'}
+
         return (
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
                  style={this.style}>
@@ -62,28 +77,10 @@ class TestApp extends React.Component {
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
-
-                <div className="app-content aboutAppContainer">
-                    <h1>SynergyOS</h1>
-                    <p>v0.3</p>
-                    <div className='aboutContactBoxWrapper'>
-                        <div className='aboutContactBox'>
-                            <img src={alex} alt='headshot' className='aboutHeadshot'/>
-                            <a href='https://github.com/sudokufan' className='aboutName'>@sudokufan</a>
-                        </div>
-                        <br/>
-                        <div className='aboutContactBox'>
-                            <img src={anton} alt='headshot' className='aboutHeadshot'/>
-                            <a href='https://github.com/anton25360' className='aboutName'>@anton25360</a>
-                        </div>
-                        <br/>
-                        <div className='aboutContactBox'>
-                            <img src={josh} alt='headshot' className='aboutHeadshot'/>
-                            <a href='https://github.com/jdselby24' className='aboutName'>@jbselby24</a>
-                        </div>
-                    </div>
+                <div className="app-content" style={appMinWidths}>
+                    <img onClick={this.getRandomGif} title="gif" id="gif-hole" src={this.state.gifUrl}
+                         alt="a GIF"></img>
                 </div>
-
                 <div className="app-statusBar">
                     <div onPointerDown={e => {
                         resizeApp(e.target.parentElement, this.activateApp)
@@ -94,4 +91,4 @@ class TestApp extends React.Component {
     }
 }
 
-export default TestApp
+export default GiphyApp

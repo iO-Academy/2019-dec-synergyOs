@@ -1,7 +1,12 @@
 import React from "react";
-import './Apps.css'
-import dragApp from './AppDragger'
-import resizeApp from './AppResizer'
+import './AboutApp.css'
+import dragApp from '../AppDragger'
+import resizeApp from '../AppResizer'
+
+
+import alex from '../../../../res/headshots/alex.png'
+import anton from '../../../../res/headshots/anton.png'
+import josh from '../../../../res/headshots/josh.png'
 
 class TestApp extends React.Component {
     constructor(props) {
@@ -45,7 +50,10 @@ class TestApp extends React.Component {
         app.style.zIndex = zIndex
     }
 
-    render() {
+    render(){
+
+        let appMinWidths = {minWidth: '100px', minHeight: '100px'}
+
         return (
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
                  style={this.style}>
@@ -60,10 +68,28 @@ class TestApp extends React.Component {
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
-                <div className="app-content">
-                    <h1>TestApp</h1>
-                    <p>i am some text</p>
+
+                <div className="app-content aboutAppContainer" style={appMinWidths}>
+                    <h1>SynergyOS</h1>
+                    <p>v0.3</p>
+                    <div className='aboutContactBoxWrapper'>
+                        <div className='aboutContactBox'>
+                            <img src={alex} alt='headshot' className='aboutHeadshot'/>
+                            <a href='https://github.com/sudokufan' className='aboutName'>@sudokufan</a>
+                        </div>
+                        <br/>
+                        <div className='aboutContactBox'>
+                            <img src={anton} alt='headshot' className='aboutHeadshot'/>
+                            <a href='https://github.com/anton25360' className='aboutName'>@anton25360</a>
+                        </div>
+                        <br/>
+                        <div className='aboutContactBox'>
+                            <img src={josh} alt='headshot' className='aboutHeadshot'/>
+                            <a href='https://github.com/jdselby24' className='aboutName'>@jbselby24</a>
+                        </div>
+                    </div>
                 </div>
+
                 <div className="app-statusBar">
                     <div onPointerDown={e => {
                         resizeApp(e.target.parentElement, this.activateApp)
