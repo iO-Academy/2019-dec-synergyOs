@@ -1,7 +1,7 @@
-.AppList{
-    border: 2px solid black;
+.AppList {
+    border: 2px solid #000000;
     border-radius: 3px;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     position: fixed;
     right: 0;
     bottom: 51px;
@@ -14,8 +14,8 @@
 }
 
 .AppListHeader {
-    background-color: rgb(162, 163, 236);
-    border-bottom: 2px solid black;
+    background-color: #A2A3EC;
+    border-bottom: 2px solid #000000;
 }
 
 .AppListItem {

@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import TestApp from './Apps/TestApp'
+import React, {Component} from 'react'
 import AppList from '../Menu/AppList'
 
 class Desktop extends Component {
@@ -29,4 +28,4 @@ class Desktop extends Component {
     }
 }
 
-export default Desktop;
+export default Desktop
