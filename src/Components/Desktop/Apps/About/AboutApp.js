@@ -69,7 +69,7 @@ class TestApp extends React.Component {
                     <p>{this.state.name}</p>
                 </div>
 
-                <div className="app-content aboutContent" style={appMinWidths}>
+                <div className="app-content aboutAppContainer" style={appMinWidths}>
                     <h1>SynergyOS</h1>
                     <p>v0.3</p>
                     <div className='aboutContactBoxWrapper'>
