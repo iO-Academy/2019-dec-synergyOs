@@ -22,8 +22,20 @@
 .AppListItem {
     padding: 5px 7px;
     list-style: none;
+    /* border: 2px solid green; */
+
 }
 
-.AppListHover:hover {
+.AppContainer{
+    /* border: 2px solid red; */
+    display: flex;
+}
+.AppContainer:hover {
     background-color: #CACACA;
+}
+
+.AppIcon{
+    /* border: 2px solid blue; */
+    padding: 7px;
+    height: 40px;
 }
