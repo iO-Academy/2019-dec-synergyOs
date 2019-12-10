@@ -49,9 +49,7 @@ class App extends Component {
 
     return (
       <div>
-
           <Desktop background='#D8AEB6' backgroundImg={logo} appState={appState} />
-
           <MenuBar currentApps={this.state.apps} openApp={this.setAppOpen}/>
       </div>
     );

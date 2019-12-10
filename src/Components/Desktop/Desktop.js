@@ -5,9 +5,29 @@ import AppList from '../Menu/AppList'
 class Desktop extends Component {
     constructor(props) {
         super(props)
+        this.state = {
+            height: window.innerHeight - 50
+        }
+    }
+
+    updateDimensions = () => {
+        this.setState({height: window.innerHeight - 50})
+    }
+
+    componentDidMount() {
+        this.updateDimensions();
+        window.addEventListener('resize', this.updateDimensions)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('reize', this.updateDimensions)
+    }
+
+    render() {
+        let desktopState = this.props.appState
         this.styles = {
             width: '100%',
-            height: '100vh',
+            height: this.state.height,
             backgroundColor: this.props.background,
             backgroundImage: ` url(${this.props.backgroundImg})`,
             backgroundRepeat: `no-repeat`,
@@ -15,12 +35,8 @@ class Desktop extends Component {
             backgroundPosition: `center`,
             backgroundSize: '50%'
         }
-    }
-
-    render() {
-        let desktopState = this.props.appState
         return(
-            <div className='desktop' style={this.styles}>
+            <div scroll="no" className='desktop' style={this.styles}>
                 <TestApp name="test" desktopState={desktopState} />
                 <TestApp name="test2" desktopState={desktopState} />
                 <AppList appData={desktopState} />
