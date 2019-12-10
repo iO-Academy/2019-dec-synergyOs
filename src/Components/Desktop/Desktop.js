@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import AppList from '../Menu/AppList'
 
 class Desktop extends Component {
@@ -17,9 +17,9 @@ class Desktop extends Component {
     }
 
     render() {
-        return(
+        return (
             <div className='desktop' style={this.styles}>
-                <AppList />
+                <AppList/>
 
             </div>
         )
