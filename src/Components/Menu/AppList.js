@@ -13,19 +13,10 @@ class AppList extends Component {
 
     render() {
 
-        let iconPath = ''
         const apps = Object.getOwnPropertyNames(this.props.appData.currentApps)
-        apps.forEach(element => {
-            if(this.appIcons.hasOwnProperty(element)) {
-                iconPath = this.appIcons[element]
-            } else {
-                iconPath = this.appIcons['About']
-            }
-        });
-
         const listItems = apps.map((appName) =>
             <div className='AppContainer'>
-                <img className='AppIcon' src={iconPath} alt='icon' />
+                <img className='AppIcon' src={this.appIcons[appName]} alt='icon' />
                 <li onClick={() => this.props.appData.openApp(appName)} key={appName} className='AppListItem'>{appName}</li>
             </div>
         )
