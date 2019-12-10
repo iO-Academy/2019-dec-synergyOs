@@ -34,3 +34,9 @@
   .app-content {
     margin: 10px
   }
+
+.app-statusBar {
+  height: 10px;
+  width: 100%;
+  background-color: rgb(172, 172, 172)
+}
