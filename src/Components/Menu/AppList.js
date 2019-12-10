@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './AppList.css'
 
-import AboutIcon from '../../res/icons/about.svg'
-import GiphyIcon from '../../res/icons/giphy.png'
+import AboutIcon from '../../res/icons/question.svg'
+import GiphyIcon from '../../res/icons/video.svg'
 
 class AppList extends Component {
 
