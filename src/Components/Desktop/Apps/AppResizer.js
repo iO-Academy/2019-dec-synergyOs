@@ -3,7 +3,7 @@ function resizeApp(target, activateApp) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0
     
     target.onmousedown = dragMouseDown;
-    let elmnt = target.parentElement
+    let elmnt = target.parentElement.querySelector('.app-content')
 
     function dragMouseDown(e) {
         e = e || window.event;

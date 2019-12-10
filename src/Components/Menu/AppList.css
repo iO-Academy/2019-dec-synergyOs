@@ -1,5 +1,5 @@
-.AppList{
-    border: 2px solid black;
+.AppList {
+    border: 2px solid #000000;
     border-radius: 3px;
     background-color: #ffffff;
     position: fixed;
