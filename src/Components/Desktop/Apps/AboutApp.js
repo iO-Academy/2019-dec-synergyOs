@@ -4,6 +4,8 @@ import dragApp from './AppDragger'
 import resizeApp from './AppResizer'
 
 import alex from '../../../res/headshots/alex.png'
+import anton from '../../../res/headshots/anton.png'
+import josh from '../../../res/headshots/josh.png'
 
 class TestApp extends React.Component {
     constructor(props){
@@ -57,12 +59,19 @@ class TestApp extends React.Component {
                 </div>
                 <div className="aboutContent">
                     <h1>SynergyOS</h1>
-                    <p>v0.5</p>
+                    <p>v0.3</p>
                     <div className='aboutContact'>
                         <img src={alex} alt='headshot' className='aboutHeadshot'/>
-                        <a href='https://www.github.com'>@cookiemonster</a>
-                        
-                    </div>
+                        <a href='https://github.com/sudokufan' className='aboutName'>@sudokufan</a>
+                    </div><br/>
+                    <div className='aboutContact'>
+                        <img src={anton} alt='headshot' className='aboutHeadshot'/>
+                        <a href='https://github.com/anton25360' className='aboutName'>@anton25360</a>
+                    </div><br/>
+                    <div className='aboutContact'>
+                        <img src={josh} alt='headshot' className='aboutHeadshot'/>
+                        <a href='https://github.com/jdselby24' className='aboutName'>@jbselby24</a>
+                    </div><br/><br/>
                 </div>
                 
                 <div className="app-statusBar">
