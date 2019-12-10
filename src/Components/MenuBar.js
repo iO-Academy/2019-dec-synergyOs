@@ -8,8 +8,8 @@ function MenuBar() {
     return (
         <div className="MenuBar">
             <Fullscreen/>
-            <div className='menuClock'><Clock /></div>
-            <div className='menuAppBtn'><AppBtn /></div>
+            <div className='menuClock'><Clock/></div>
+            <div className='menuAppBtn'><AppBtn/></div>
         </div>
     )
 }
