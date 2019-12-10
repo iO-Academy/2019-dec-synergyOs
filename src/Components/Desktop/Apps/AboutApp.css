@@ -1,9 +1,14 @@
-.aboutContent {
+.aboutAppContainer {
     text-align: center;
     margin: 20px;
 }
 
-.aboutContact {
+.aboutContactBoxWrapper {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.aboutContactBox {
     margin-top: 20px;
     display: inline-flex;
     align-items: center;

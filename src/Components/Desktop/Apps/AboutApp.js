@@ -64,24 +64,26 @@ class TestApp extends React.Component {
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
-                <div className="app-content aboutContent">
+
+                <div className="app-content aboutAppContainer">
                     <h1>SynergyOS</h1>
                     <p>v0.3</p>
-                    <div className='aboutContact'>
-                        <img src={alex} alt='headshot' className='aboutHeadshot'/>
-                        <a href='https://github.com/sudokufan' className='aboutName'>@sudokufan</a>
+                    <div className='aboutContactBoxWrapper'>
+                        <div className='aboutContactBox'>
+                            <img src={alex} alt='headshot' className='aboutHeadshot'/>
+                            <a href='https://github.com/sudokufan' className='aboutName'>@sudokufan</a>
+                        </div>
+                        <br/>
+                        <div className='aboutContactBox'>
+                            <img src={anton} alt='headshot' className='aboutHeadshot'/>
+                            <a href='https://github.com/anton25360' className='aboutName'>@anton25360</a>
+                        </div>
+                        <br/>
+                        <div className='aboutContactBox'>
+                            <img src={josh} alt='headshot' className='aboutHeadshot'/>
+                            <a href='https://github.com/jdselby24' className='aboutName'>@jbselby24</a>
+                        </div>
                     </div>
-                    <br/>
-                    <div className='aboutContact'>
-                        <img src={anton} alt='headshot' className='aboutHeadshot'/>
-                        <a href='https://github.com/anton25360' className='aboutName'>@anton25360</a>
-                    </div>
-                    <br/>
-                    <div className='aboutContact'>
-                        <img src={josh} alt='headshot' className='aboutHeadshot'/>
-                        <a href='https://github.com/jdselby24' className='aboutName'>@jbselby24</a>
-                    </div>
-                    <br/><br/>
                 </div>
 
                 <div className="app-statusBar">
