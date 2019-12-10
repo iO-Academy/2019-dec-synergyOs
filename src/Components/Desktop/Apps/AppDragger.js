@@ -1,7 +1,7 @@
 function dragApp(target, activateApp) {
     activateApp()
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0
-    
+
     target.onmousedown = dragMouseDown;
     let elmnt = target.parentElement
 
@@ -31,7 +31,7 @@ function dragApp(target, activateApp) {
         // stop moving when mouse button is released:
         document.onmouseup = null;
         document.onmousemove = null;
-      }
+    }
 }
 
 module.exports = dragApp 

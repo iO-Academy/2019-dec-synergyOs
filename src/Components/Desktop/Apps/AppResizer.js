@@ -1,7 +1,7 @@
 function resizeApp(target, activateApp) {
     activateApp()
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0
-    
+
     target.onmousedown = dragMouseDown;
     let elmnt = target.parentElement.querySelector('.app-content')
     console.log(target.parentElement.querySelector('.app-content'))
@@ -51,6 +51,7 @@ function resizeApp(target, activateApp) {
             elmnt.style.height = 100
         }
       }
+
 }
 
 module.exports = resizeApp 

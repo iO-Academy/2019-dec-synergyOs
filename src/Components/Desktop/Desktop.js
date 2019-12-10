@@ -37,7 +37,7 @@ class Desktop extends Component {
             backgroundSize: '50%',
             overflow: 'hidden'
         }
-        return(
+        return (
             <div scroll="no" className='desktop' style={this.styles}>
                 <AboutApp name="About" desktopState={desktopState} />
                 <GiphyApp name="Giphy" desktopState={desktopState}/>

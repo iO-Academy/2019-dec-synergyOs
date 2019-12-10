@@ -1,12 +1,11 @@
 import React from "react";
 import './AboutApp.css'
-import dragApp from '../AppDragger'
-import resizeApp from '../AppResizer'
+import dragApp from './'
+import resizeApp from './AppResizer'
 
-
-import alex from '../../../../res/headshots/alex.png'
-import anton from '../../../../res/headshots/anton.png'
-import josh from '../../../../res/headshots/josh.png'
+import alex from '../../../res/headshots/alex.png'
+import anton from '../../../res/headshots/anton.png'
+import josh from '../../../res/headshots/josh.png'
 
 class TestApp extends React.Component {
     constructor(props) {
@@ -50,10 +49,7 @@ class TestApp extends React.Component {
         app.style.zIndex = zIndex
     }
 
-    render(){
-
-        let appMinWidths = {minWidth: '100px', minHeight: '100px'}
-
+    render() {
         return (
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
                  style={this.style}>
@@ -69,7 +65,7 @@ class TestApp extends React.Component {
                     <p>{this.state.name}</p>
                 </div>
 
-                <div className="app-content aboutContent" style={appMinWidths}>
+                <div className="app-content aboutAppContainer">
                     <h1>SynergyOS</h1>
                     <p>v0.3</p>
                     <div className='aboutContactBoxWrapper'>
