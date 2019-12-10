@@ -18,9 +18,11 @@ class Desktop extends Component {
     }
 
     render() {
+        let desktopState = this.props
         return(
             <div className='desktop' style={this.styles}>
-                <TestApp name="test" currentApps={this.props.currentApps} closeApp={this.props.closeApp}/>
+                <TestApp name="test" desktopState={desktopState} />
+                <TestApp name="test2" desktopState={desktopState} />
                 <AppList />
             </div>
         )

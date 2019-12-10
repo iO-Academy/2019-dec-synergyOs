@@ -1,6 +1,12 @@
 .app {
     background-color: #ffffff;
     position: absolute;
+    border: 2px solid black;
+    
+  }
+
+  .app .active {
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.386);
   }
   
   .app .topBar {
@@ -10,10 +16,20 @@
   
   .app .topBar * {
     display: inline;
+    margin: 3px;
+  }
+
+  .app .topBar button {
+    background-color: black;
+    color: white
   }
   
   .app .topBar .divider {
     background-color: #000;
     width: 60%;
     height: 10px;
+  }
+
+  .app-content {
+    margin: 10px
   }
