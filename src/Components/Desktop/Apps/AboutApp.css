@@ -11,12 +11,12 @@
 
 .aboutHeadshot{
     height: 80px;
-    border: 2px solid black;
+    border: 2px solid #000000;
 }
 
 .aboutName{
     font-size: 23px;
     margin: 20px;
     text-decoration: none;
-    color: rgb(14, 12, 117);
+    color: #0E0C75;
 }

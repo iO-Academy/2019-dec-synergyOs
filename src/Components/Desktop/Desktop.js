@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import AboutApp from './Apps/AboutApp'
 import TestApp from "./Apps/TestApp";
 import AppList from '../Menu/AppList'
@@ -36,12 +36,12 @@ class Desktop extends Component {
             backgroundPosition: `center`,
             backgroundSize: '50%'
         }
-        return(
+        return (
             <div scroll="no" className='desktop' style={this.styles}>
-                <AboutApp name="About" desktopState={desktopState} />
-                <TestApp name="test" desktopState={desktopState} />
-                <TestApp name="test2" desktopState={desktopState} />
-                <AppList appData={desktopState} />
+                <AboutApp name="About" desktopState={desktopState}/>
+                <TestApp name="test" desktopState={desktopState}/>
+                <TestApp name="test2" desktopState={desktopState}/>
+                <AppList appData={desktopState}/>
             </div>
         )
     }
