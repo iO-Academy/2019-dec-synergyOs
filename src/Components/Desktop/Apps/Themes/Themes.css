@@ -1,0 +1,18 @@
+.app-content {
+    width: 350px;
+    height: 400px;
+}
+
+.themesContainer {
+    text-align: center;
+    margin: 20px;
+}
+
+.themeBtn {
+    background-color: rgb(24, 170, 163);
+    color: white;
+    padding: 3px 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+}

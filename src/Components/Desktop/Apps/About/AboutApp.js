@@ -3,7 +3,6 @@ import './AboutApp.css'
 import dragApp from '../AppDragger'
 import resizeApp from '../AppResizer'
 
-
 import alex from '../../../../res/headshots/alex.png'
 import anton from '../../../../res/headshots/anton.png'
 import josh from '../../../../res/headshots/josh.png'

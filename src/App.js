@@ -9,10 +9,10 @@ class App extends Component {
     super(props);
 
     this.state = {
-      apps: {
-      },
+      apps: {},
       activeApp: '',
       currentZ: '1',
+      theme: 'default'
     }
   }
 
@@ -36,6 +36,12 @@ class App extends Component {
     return(currentState.currentZ)
   }
 
+  setCurrentTheme = (theme) => {
+    let currentState = this.state
+    currentState.theme = theme
+    this.setState(currentState)
+  }
+
   render() {
 
     let appState = {
@@ -45,11 +51,12 @@ class App extends Component {
       closeApp: this.setAppClosed,
       activateApp: this.setAppActive,
       currentZ: this.state.currentZ,
+      setTheme: this.setCurrentTheme
     }
 
     return (
       <div>
-          <Desktop background='#D8AEB6' backgroundImg={logo} appState={appState} />
+          <Desktop background='#D8AEB6' backgroundImg={logo} appState={appState} theme={this.state.theme} />
           <MenuBar currentApps={this.state.apps} openApp={this.setAppOpen}/>
       </div>
     );

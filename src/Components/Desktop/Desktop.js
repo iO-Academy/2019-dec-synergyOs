@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
-import AboutApp from './Apps/About/AboutApp'
 import AppList from '../Menu/AppList'
 import './Apps/Apps.css'
+
+import AboutApp from './Apps/About/AboutApp'
 import GiphyApp from './Apps/Giphy/Giphy'
+import ThemesApp from './Apps/Themes/Themes'
 
 class Desktop extends Component {
     constructor(props) {
@@ -25,6 +27,12 @@ class Desktop extends Component {
         window.removeEventListener('resize', this.updateDimensions)
     }
 
+    componentDidUpdate() {
+        var theme = this.props.theme
+        
+        
+    }
+
     render() {
         let desktopState = this.props.appState
         this.styles = {
@@ -42,6 +50,7 @@ class Desktop extends Component {
             <div scroll="no" className='desktop' style={this.styles}>
                 <AboutApp name="About" desktopState={desktopState}/>
                 <GiphyApp name="Giphy" desktopState={desktopState}/>
+                <ThemesApp name="Themes" desktopState={desktopState}/>
                 <AppList appData={desktopState}/>
             </div>
         )
