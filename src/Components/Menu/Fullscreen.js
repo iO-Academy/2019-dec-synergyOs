@@ -19,7 +19,7 @@ const toggleFullscreen = () => {
 const Fullscreen = () => {
 
     return (
-        <img id="fullscreenButton" src={fullscreenOpen} onClick={toggleFullscreen} />
+        <img id="fullscreenButton" alt='synergyOS logo' src={fullscreenOpen} onClick={toggleFullscreen} />
     )
 }
 
