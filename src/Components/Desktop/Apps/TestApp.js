@@ -4,20 +4,20 @@ import './Apps.css'
 class TestApp extends React.Component {
     constructor(props){
         super(props)
-        let appName = 'test'
-        console.log(this.props.currentApps[appName])
+        let appName = this.props.name
+        console.log(this.props.desktopState.currentApps[appName])
         this.state = {
             name: appName,
-            visibility: this.props.currentApps[appName],
+            visibility: this.props.desktopState.currentApps[appName],
         }
     }
 
     componentDidUpdate(prevProps) {
-        console.log(this.props.currentApps[this.state.name])
+        console.log(this.props.desktopState.currentApps[this.state.name])
         if(prevProps !== this.props) {
             this.setState({
                 name: "test",
-                visibility: this.props.currentApps[this.state.name],
+                visibility: this.props.desktopState.currentApps[this.state.name],
             })
         }
     }
@@ -27,6 +27,7 @@ class TestApp extends React.Component {
         
         target.onmousedown = dragMouseDown;
         let elmnt = target.parentElement
+        console.log(elmnt.style.width)
 
         function dragMouseDown(e) {
             e = e || window.event;
@@ -45,13 +46,9 @@ class TestApp extends React.Component {
             pos3 = e.clientX;
             pos4 = e.clientY;
 
-            console.log([pos1, pos2])
-
             // set the element's new position:
             elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
             elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-
-            console.log(elmnt.style)
         }
 
         function closeDragElement() {
@@ -67,7 +64,7 @@ class TestApp extends React.Component {
         return (
             <div id={this.state.name} className={'app ' + this.state.visibility}>
                 <div className="topBar" onPointerDown={e => this.dragApp(e.target)}>
-                    <button onClick={() => this.props.closeApp(this.props.name)}>X</button>
+                    <button onClick={() => this.props.desktopState.closeApp(this.state.name)}>X</button>
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>

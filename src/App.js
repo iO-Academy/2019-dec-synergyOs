@@ -11,7 +11,8 @@ class App extends Component {
     this.state = {
       apps: {
         test: 'open'
-      }
+      },
+      activeApp: ''
     }
   }
 
@@ -27,10 +28,21 @@ class App extends Component {
     this.setState(currentState)
   }
 
+  setAppActive = (appName) => {
+    let currentState = this.state
+    currentState.activeApp = appName
+    this.setState(currentState)
+  }
+
   render() {
     return (
       <div>
-          <Desktop background='#D8AEB6' backgroundImg={logo} currentApps={this.state.apps} closeApp={this.setAppClosed}/>
+
+          <Desktop background='#D8AEB6' backgroundImg={logo} appState={this.state}
+          currentApps={this.state.apps} activeApp={this.state.activeApp} 
+          openApp={this.setAppOpen} closeApp={this.setAppClosed} a
+          ctivateApp={this.setAppActive} />
+
           <MenuBar currentApps={this.state.apps} openApp={this.setAppOpen}/>
       </div>
     );
