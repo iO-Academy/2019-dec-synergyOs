@@ -1,7 +1,7 @@
 import React from "react";
 import './Apps.css'
 import dragApp from './AppDragger'
-console.log(dragApp)
+import resizeApp from './AppResizer'
 
 class TestApp extends React.Component {
     constructor(props){
@@ -55,7 +55,7 @@ class TestApp extends React.Component {
                     <h1>TestApp</h1>
                 </div>
                 <div className="app-statusBar">
-
+                    <div onPointerDown={e => { resizeApp(e.target.parentElement, this.activateApp)}}></div>
                 </div>
             </div>
         )
