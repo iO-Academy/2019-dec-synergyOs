@@ -10,7 +10,6 @@ class GiphyApp extends React.Component {
         super(props)
         this.getRandomGif()
         let appName = this.props.name
-        console.log(this.props.desktopState.currentApps[appName])
         this.state = {
             name: appName,
             visibility: this.props.desktopState.currentApps[appName],
