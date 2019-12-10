@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import './AppList.css'
 
 function AppList() {
@@ -15,4 +15,4 @@ function AppList() {
     )
 }
 
-export default AppList;
+export default AppList

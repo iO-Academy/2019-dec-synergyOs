@@ -1,8 +1,8 @@
-import React from 'react';
-import './MenuBar.css';
+import React from 'react'
+import './MenuBar.css'
 import Clock from './Menu/Clock'
 import AppBtn from './Menu/AppBtn'
-import Fullscreen from "./Menu/Fullscreen";
+import Fullscreen from "./Menu/Fullscreen"
 
 function MenuBar() {
     return (
@@ -14,4 +14,4 @@ function MenuBar() {
     )
 }
 
-export default MenuBar;
+export default MenuBar

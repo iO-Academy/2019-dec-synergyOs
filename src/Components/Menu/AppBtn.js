@@ -5,8 +5,8 @@ class AppBtn extends React.Component {
     render() {
 
         const showAppList = () => {
-            var appList = document.querySelector('.AppList');
-            appList.style.display = appList.style.display === "block" ? "none" : "block";
+            var appList = document.querySelector('.AppList')
+            appList.style.display = appList.style.display === "block" ? "none" : "block"
         }
 
         return (

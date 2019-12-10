@@ -26,4 +26,4 @@ class Desktop extends Component {
     }
 }
 
-export default Desktop;
+export default Desktop
