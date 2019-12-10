@@ -20,7 +20,6 @@ class Desktop extends Component {
         return (
             <div className='desktop' style={this.styles}>
                 <AppList/>
-
             </div>
         )
     }
