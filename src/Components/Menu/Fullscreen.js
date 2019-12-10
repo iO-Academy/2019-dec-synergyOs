@@ -8,18 +8,18 @@ const root = document.getElementById('root')
 const toggleFullscreen = () => {
 
     if (screenfull.isFullscreen) {
-        document.getElementById('fullscreenButton').src=fullscreenOpen
+        document.getElementById('fullscreenButton').src = fullscreenOpen
         screenfull.exit()
     } else {
-        document.getElementById('fullscreenButton').src=fullscreenClose
+        document.getElementById('fullscreenButton').src = fullscreenClose
         screenfull.request(root)
-        }
+    }
 }
 
 const Fullscreen = () => {
 
     return (
-        <img id="fullscreenButton" alt='synergyOS logo' src={fullscreenOpen} onClick={toggleFullscreen} />
+        <img id="fullscreenButton" alt='synergyOS logo' src={fullscreenOpen} onClick={toggleFullscreen}/>
     )
 }
 

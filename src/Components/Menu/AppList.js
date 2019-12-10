@@ -19,4 +19,4 @@ class AppList extends Component {
     }
 }
 
-export default AppList;
+export default AppList
