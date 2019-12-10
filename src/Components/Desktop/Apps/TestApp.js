@@ -19,21 +19,28 @@ class TestApp extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        console.log(this.props.desktopState.currentApps[this.state.name])
         if(prevProps !== this.props) {
             this.setState({
                 name: this.state.name,
                 visibility: this.props.desktopState.currentApps[this.state.name],
             })
         }
+
+        let app = document.getElementById(this.state.name)
+
+        if(this.props.desktopState.activeApp === this.state.name) {
+            app.classList.add('active')
+        } else {
+            app.classList.remove('active')
+        }
     }
 
     dragApp(target) {
+        this.activateApp()
         let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0
         
         target.onmousedown = dragMouseDown;
         let elmnt = target.parentElement
-        console.log(elmnt.style.width)
 
         function dragMouseDown(e) {
             e = e || window.event;
@@ -64,9 +71,15 @@ class TestApp extends React.Component {
           }
     }
 
+    activateApp = () => {
+        let zIndex = this.props.desktopState.activateApp(this.state.name)
+        let app = document.getElementById(this.state.name)
+        app.style.zIndex = zIndex
+    }
+
     render(){
         return (
-            <div id={this.state.name} className={'app ' + this.state.visibility} style={this.style}>
+            <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility} style={this.style}>
                 <div className="topBar" onPointerDown={e => this.dragApp(e.target)}>
                     <button onClick={() => {this.props.desktopState.closeApp(this.state.name); console.log(this.state.name)}}>X</button>
                     <div className="divider"></div>

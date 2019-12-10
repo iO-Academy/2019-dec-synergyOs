@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './AppList.css'
 
-function AppList() {
-    return (
-        <div className="AppList">
-            <ul className='AppListInternal'>
-                <li className='AppListHeader AppListItem' >My Apps</li>
-                <li className='AppListItem' >app 1</li>
-                <li className='AppListItem' >app 2</li>
-                <li className='AppListItem' >app 3</li>
-                <li className='AppListItem' >app 4</li>
-            </ul>
-        </div>
-    )
+class AppList extends Component {
+    render() {
+        const apps = Object.getOwnPropertyNames(this.props.appData.currentApps)
+        const listItems = apps.map((appName) =>
+            <li onClick={()=>this.props.appData.openApp(appName)} key={appName} className='AppListItem AppListHover'>{appName}</li>
+        )
+
+        return (
+            <div className="AppList">
+                <ul className='AppListInternal'>
+                    <li className='AppListHeader AppListItem' >My Apps</li>
+                    {listItems}
+                </ul>
+            </div>
+        )
+    }
 }
 
 export default AppList;
