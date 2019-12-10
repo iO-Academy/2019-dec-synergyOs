@@ -3,6 +3,8 @@ import './Apps.css'
 import dragApp from './AppDragger'
 import resizeApp from './AppResizer'
 
+import alex from '../../../res/headshots/alex.png'
+
 class TestApp extends React.Component {
     constructor(props){
         super(props)
@@ -53,10 +55,16 @@ class TestApp extends React.Component {
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
-                <div className="app-content">
+                <div className="aboutContent">
                     <h1>SynergyOS</h1>
                     <p>v0.5</p>
+                    <div className='aboutContact'>
+                        <img src={alex} alt='headshot' className='aboutHeadshot'/>
+                        <a href='https://www.github.com'>@cookiemonster</a>
+                        
+                    </div>
                 </div>
+                
                 <div className="app-statusBar">
                     <div onPointerDown={e => { resizeApp(e.target.parentElement, this.activateApp)}}></div>
                 </div>
