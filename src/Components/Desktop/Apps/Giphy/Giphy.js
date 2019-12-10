@@ -61,6 +61,9 @@ class GiphyApp extends React.Component {
     }
 
     render() {
+
+        let appMinWidths = {minWidth: '100px', minHeight: '100px'}
+
         return (
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
                  style={this.style}>
@@ -74,7 +77,7 @@ class GiphyApp extends React.Component {
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
-                <div className="app-content">
+                <div className="app-content" style={appMinWidths}>
                     <img onClick={this.getRandomGif} title="gif" id="gif-hole" src={this.state.gifUrl}
                          alt="a GIF"></img>
                 </div>

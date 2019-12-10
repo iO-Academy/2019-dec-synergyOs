@@ -50,6 +50,9 @@ class TestApp extends React.Component {
     }
 
     render(){
+
+        let appMinWidths = {minWidth: '100px', minHeight: '100px'}
+
         return (
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility} style={this.style}>
                 <div className="topBar" onPointerDown={e => { dragApp(e.target, this.activateApp)}}>
@@ -57,7 +60,7 @@ class TestApp extends React.Component {
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
-                <div className="app-content aboutContent">
+                <div className="app-content aboutContent" style={appMinWidths}>
                     <h1>SynergyOS</h1>
                     <p>v0.3</p>
                     <div className='aboutContact'>
