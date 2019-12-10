@@ -1,6 +1,7 @@
 .app {
     background-color: #ffffff;
     position: absolute;
+    overflow: hidden;
     border: 2px solid #000000;
     box-shadow: 2.5px 2.5px #00000062;
     
