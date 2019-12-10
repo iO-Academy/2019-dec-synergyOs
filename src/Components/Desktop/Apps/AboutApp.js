@@ -1,6 +1,6 @@
 import React from "react";
 import './AboutApp.css'
-import dragApp from './AppDragger'
+import dragApp from './'
 import resizeApp from './AppResizer'
 
 import alex from '../../../res/headshots/alex.png'

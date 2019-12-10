@@ -1,6 +1,7 @@
-import React, {Component} from 'react'
-import AboutApp from './Apps/AboutApp'
+import React, { Component } from 'react'
+import AboutApp from './Apps/About/AboutApp'
 import AppList from '../Menu/AppList'
+import GiphyApp from './Apps//Giphy/Giphy'
 
 class Desktop extends Component {
     constructor(props) {
@@ -20,7 +21,7 @@ class Desktop extends Component {
     }
 
     componentWillUnmount() {
-        window.removeEventListener('reize', this.updateDimensions)
+        window.removeEventListener('resize', this.updateDimensions)
     }
 
     render() {
@@ -39,6 +40,7 @@ class Desktop extends Component {
         return (
             <div scroll="no" className='desktop' style={this.styles}>
                 <AboutApp name="About" desktopState={desktopState} />
+                <GiphyApp name="Giphy" desktopState={desktopState}/>
                 <AppList appData={desktopState} />
             </div>
         )

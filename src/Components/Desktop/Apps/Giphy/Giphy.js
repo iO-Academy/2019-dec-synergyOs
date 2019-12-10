@@ -1,16 +1,19 @@
 import React from "react";
-import './Apps.css'
-import dragApp from './AppDragger'
-import resizeApp from './AppResizer'
+import '../Apps.css'
+import dragApp from '../AppDragger'
+import resizeApp from '../AppResizer'
+import './Giphy.css'
 
-class TestApp extends React.Component {
+class GiphyApp extends React.Component {
+
     constructor(props) {
         super(props)
+        this.getRandomGif()
         let appName = this.props.name
-        console.log(this.props.desktopState.currentApps[appName])
         this.state = {
             name: appName,
             visibility: this.props.desktopState.currentApps[appName],
+            gifUrl: ""
         }
 
         this.style = {
@@ -28,6 +31,8 @@ class TestApp extends React.Component {
                 name: this.state.name,
                 visibility: this.props.desktopState.currentApps[this.state.name],
             })
+
+            this.getRandomGif()
         }
 
         let app = document.getElementById(this.state.name)
@@ -45,10 +50,19 @@ class TestApp extends React.Component {
         app.style.zIndex = zIndex
     }
 
-    render(){
+    getRandomGif = () => {
+        fetch("http://api.giphy.com/v1/gifs/random?api_key=cG6pIvcb28OdKIy6mEkrpuUzuOpRKHDC", {method: 'get'})
+            .then(res => res.json())
+            .then(res => {
+                let currentState = this.state
+                currentState.gifUrl = res.data.images.downsized.url
+                this.setState(currentState)
+            })
+    }
+
+    render() {
 
         let appMinWidths = {minWidth: '100px', minHeight: '100px'}
-
 
         return (
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
@@ -58,15 +72,14 @@ class TestApp extends React.Component {
                 }}>
                     <button onClick={() => {
                         this.props.desktopState.closeApp(this.state.name);
-                        console.log(this.state.name)
                     }}>X
                     </button>
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
                 <div className="app-content" style={appMinWidths}>
-                    <h1>TestApp</h1>
-                    <p>i am some text</p>
+                    <img onClick={this.getRandomGif} title="gif" id="gif-hole" src={this.state.gifUrl}
+                         alt="a GIF"></img>
                 </div>
                 <div className="app-statusBar">
                     <div onPointerDown={e => {
@@ -78,4 +91,4 @@ class TestApp extends React.Component {
     }
 }
 
-export default TestApp
+export default GiphyApp
