@@ -1,0 +1,27 @@
+.aboutAppContainer {
+    text-align: center;
+    margin: 20px;
+}
+
+.aboutContactBoxWrapper {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.aboutContactBox {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.aboutHeadshot {
+    height: 80px;
+    border: 2px solid #000000;
+}
+
+.aboutName {
+    font-size: 23px;
+    margin: 20px;
+    text-decoration: none;
+    color: #0E0C75;
+}
