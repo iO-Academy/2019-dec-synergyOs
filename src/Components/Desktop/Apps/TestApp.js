@@ -44,9 +44,14 @@ class TestApp extends React.Component {
             pos2 = pos4 - e.clientY;
             pos3 = e.clientX;
             pos4 = e.clientY;
+
+            console.log([pos1, pos2])
+
             // set the element's new position:
             elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
             elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+
+            console.log(elmnt.style)
         }
 
         function closeDragElement() {
@@ -60,14 +65,14 @@ class TestApp extends React.Component {
 
     render(){
         return (
-            <div className={'app ' + this.state.visibility}>
+            <div id={this.state.name} className={'app ' + this.state.visibility}>
                 <div className="topBar" onPointerDown={e => this.dragApp(e.target)}>
                     <button onClick={() => this.props.closeApp(this.props.name)}>X</button>
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
                 <div className="app-content">
-                <h1>TestApp</h1>
+                    <h1>TestApp</h1>
                 </div>
             </div>
         )

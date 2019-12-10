@@ -13,6 +13,11 @@
     user-select: none; 
 }
 
+#root {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .closed {
   display: none;
 }
