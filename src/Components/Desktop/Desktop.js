@@ -12,7 +12,8 @@ class Desktop extends Component {
             backgroundImage: ` url(${this.props.backgroundImg})`,
             backgroundRepeat: `no-repeat`,
             backgroundAttachment: `fixed`,
-            backgroundPosition: `center`
+            backgroundPosition: `center`,
+            backgroundSize: '50%'
         }
     }
 
