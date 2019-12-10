@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import AboutApp from './Apps/AboutApp'
-import TestApp from "./Apps/TestApp";
 import AppList from '../Menu/AppList'
 
 class Desktop extends Component {
