@@ -39,8 +39,6 @@ class Desktop extends Component {
         return(
             <div scroll="no" className='desktop' style={this.styles}>
                 <AboutApp name="About" desktopState={desktopState} />
-                <TestApp name="test" desktopState={desktopState} />
-                <TestApp name="test2" desktopState={desktopState} />
                 <AppList appData={desktopState} />
             </div>
         )
