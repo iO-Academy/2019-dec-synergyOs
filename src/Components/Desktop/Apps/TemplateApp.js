@@ -4,7 +4,7 @@ import dragApp from './AppDragger'
 import resizeApp from './AppResizer'
 
 class TestApp extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         let appName = this.props.name
         console.log(this.props.desktopState.currentApps[appName])
@@ -19,11 +19,11 @@ class TestApp extends React.Component {
         }
 
         this.props.desktopState.closeApp(appName)
-    
+
     }
 
     componentDidUpdate(prevProps) {
-        if(prevProps !== this.props) {
+        if (prevProps !== this.props) {
             this.setState({
                 name: this.state.name,
                 visibility: this.props.desktopState.currentApps[this.state.name],
@@ -32,7 +32,7 @@ class TestApp extends React.Component {
 
         let app = document.getElementById(this.state.name)
 
-        if(this.props.desktopState.activeApp === this.state.name) {
+        if (this.props.desktopState.activeApp === this.state.name) {
             app.classList.add('active')
         } else {
             app.classList.remove('active')
@@ -45,11 +45,18 @@ class TestApp extends React.Component {
         app.style.zIndex = zIndex
     }
 
-    render(){
+    render() {
         return (
-            <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility} style={this.style}>
-                <div className="topBar" onPointerDown={e => { dragApp(e.target, this.activateApp)}}>
-                    <button onClick={() => {this.props.desktopState.closeApp(this.state.name); console.log(this.state.name)}}>X</button>
+            <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
+                 style={this.style}>
+                <div className="topBar" onPointerDown={e => {
+                    dragApp(e.target, this.activateApp)
+                }}>
+                    <button onClick={() => {
+                        this.props.desktopState.closeApp(this.state.name);
+                        console.log(this.state.name)
+                    }}>X
+                    </button>
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
@@ -58,7 +65,9 @@ class TestApp extends React.Component {
                     <p>i am some text</p>
                 </div>
                 <div className="app-statusBar">
-                    <div onPointerDown={e => { resizeApp(e.target.parentElement, this.activateApp)}}></div>
+                    <div onPointerDown={e => {
+                        resizeApp(e.target.parentElement, this.activateApp)
+                    }}></div>
                 </div>
             </div>
         )

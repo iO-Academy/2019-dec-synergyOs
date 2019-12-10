@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import AboutApp from './Apps/AboutApp'
 import AppList from '../Menu/AppList'
 
@@ -36,7 +36,7 @@ class Desktop extends Component {
             backgroundSize: '50%',
             overflow: 'hidden'
         }
-        return(
+        return (
             <div scroll="no" className='desktop' style={this.styles}>
                 <AboutApp name="About" desktopState={desktopState} />
                 <AppList appData={desktopState} />
