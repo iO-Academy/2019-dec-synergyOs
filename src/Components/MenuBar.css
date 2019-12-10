@@ -1,0 +1,24 @@
+.MenuBar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000D9;
+    color: #ffffff;
+    margin: 0;
+    padding: 15px;
+}
+
+.menuClock {
+    float: left;
+}
+
+.menuAppBtn {
+    float: right;
+}
+
+#fullscreenButton {
+    float: left;
+    height: 20px;
+    margin-right: 10px;
+}
