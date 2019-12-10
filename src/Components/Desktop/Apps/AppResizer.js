@@ -29,11 +29,11 @@ function resizeApp(target, activateApp) {
 
         console.log(elmnt.offsetWidth)
 
-        if(elmnt.offsetWidth < 100) {
+        if (elmnt.offsetWidth < 100) {
             elmnt.offsetWidth = 100
         }
-        
-        if(elmnt.offsetHeight < 100) {
+
+        if (elmnt.offsetHeight < 100) {
             elmnt.offsetHeight = 100
         }
     }
@@ -43,14 +43,14 @@ function resizeApp(target, activateApp) {
         document.onmouseup = null;
         document.onmousemove = null;
 
-        if(elmnt.offsetWidth < 100) {
+        if (elmnt.offsetWidth < 100) {
             elmnt.style.width = 100
         }
-        
-        if(elmnt.offsetHeight < 100) {
+
+        if (elmnt.offsetHeight < 100) {
             elmnt.style.height = 100
         }
-      }
+    }
 
 }
 
