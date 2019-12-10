@@ -1,0 +1,79 @@
+.app {
+    background-color: #ffffff;
+    position: absolute;
+    overflow: hidden;
+    border: 2px solid #000000;
+    box-shadow: 2.5px 2.5px #00000062;
+    overflow: hidden;
+  }
+
+  .active {
+    box-shadow: 5px 5px #00000062;
+  }
+  
+  .app .topBar {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .app .topBar * {
+    display: inline;
+    margin: 3px;
+  }
+
+  .app .topBar button {
+    background-color: rgb(247, 84, 84);
+    border: 2px solid black;
+    border-radius: 4px;
+    color: #ffffff
+  }
+  
+  .app .topBar .divider {
+    background-color: #000000;
+    width: 60%;
+    height: 10px;
+  }
+
+  .app-content {
+    margin: 10px
+  }
+
+.app-statusBar {
+  height: 10px;
+  width: 100%;
+  background-color: #999;
+  position: absolute;
+  bottom: 0;
+  overflow: auto;
+}
+
+.app-statusBar div {
+  width: 10px;
+  height: 10px;
+  background-color: #555555;
+  float: right;
+}
+
+/* about app */
+.aboutContent{
+  text-align: center;
+  margin: 20px;
+}
+
+.aboutContact{
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.aboutHeadshot{
+  height: 80px;
+  border: 2px solid black;
+}
+
+.aboutName{
+  font-size: 23px;
+  margin: 20px;
+  text-decoration: none;
+  color: rgb(14, 12, 117);
+}
