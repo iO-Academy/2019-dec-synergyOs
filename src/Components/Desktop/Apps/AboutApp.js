@@ -1,5 +1,5 @@
 import React from "react";
-import './Apps.css'
+import './AboutApp.css'
 import dragApp from './AppDragger'
 import resizeApp from './AppResizer'
 

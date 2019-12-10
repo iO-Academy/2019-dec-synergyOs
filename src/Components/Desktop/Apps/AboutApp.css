@@ -1,0 +1,22 @@
+.aboutContent{
+    text-align: center;
+    margin: 20px;
+}
+
+.aboutContact{
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.aboutHeadshot{
+    height: 80px;
+    border: 2px solid black;
+}
+
+.aboutName{
+    font-size: 23px;
+    margin: 20px;
+    text-decoration: none;
+    color: rgb(14, 12, 117);
+}
