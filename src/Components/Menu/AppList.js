@@ -5,7 +5,7 @@ class AppList extends Component {
     render() {
         const apps = Object.getOwnPropertyNames(this.props.appData.currentApps)
         const listItems = apps.map((appName) =>
-            <li onClick={()=>console.log('open app')} key={appName} className='AppListItem AppListHover'>{appName}</li>
+            <li onClick={()=>this.props.appData.openApp(appName)} key={appName} className='AppListItem AppListHover'>{appName}</li>
         )
 
         return (
