@@ -3,7 +3,6 @@ import TestApp from './Apps/TestApp'
 import AppList from '../Menu/AppList'
 
 class Desktop extends Component {
-
     constructor(props) {
         super(props)
         this.styles = {
