@@ -21,7 +21,7 @@ class Desktop extends Component {
     }
 
     componentWillUnmount() {
-        window.removeEventListener('reize', this.updateDimensions)
+        window.removeEventListener('resize', this.updateDimensions)
     }
 
     render() {
