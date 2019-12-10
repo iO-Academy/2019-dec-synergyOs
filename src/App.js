@@ -10,7 +10,6 @@ function App() {
             <Desktop background='#D8AEB6' backgroundImg={logo}/>
             <MenuBar/>
         </div>
-
     );
 }
 
