@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import AboutApp from './Apps/AboutApp'
+import AboutApp from './Apps/About/AboutApp'
 import AppList from '../Menu/AppList'
 import GiphyApp from './Apps//Giphy/Giphy'
 
