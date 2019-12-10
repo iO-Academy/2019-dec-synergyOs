@@ -1,11 +1,11 @@
 import React from "react";
-import './Apps.css'
-import dragApp from './AppDragger'
-import resizeApp from './AppResizer'
+import '../Apps.css'
+import dragApp from '../AppDragger'
+import resizeApp from '../AppResizer'
 
-import alex from '../../../res/headshots/alex.png'
-import anton from '../../../res/headshots/anton.png'
-import josh from '../../../res/headshots/josh.png'
+import alex from '../../../../res/headshots/alex.png'
+import anton from '../../../../res/headshots/anton.png'
+import josh from '../../../../res/headshots/josh.png'
 
 class TestApp extends React.Component {
     constructor(props){
