@@ -22,7 +22,7 @@ class Desktop extends Component {
             <div className='desktop' style={this.styles}>
                 <TestApp name="test" desktopState={desktopState} />
                 <TestApp name="test2" desktopState={desktopState} />
-                <AppList AppData={desktopState} />
+                <AppList appData={desktopState} />
             </div>
         )
     }
