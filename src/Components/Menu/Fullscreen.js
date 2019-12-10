@@ -1,18 +1,18 @@
 import React from 'react'
+import screenfull from 'screenfull'
 import fullscreenClose from '../../res/fullscreenClose.svg'
 import fullscreenOpen from '../../res/fullscreenOpen.svg'
 
 const root = document.getElementById('root')
 
 const toggleFullscreen = () => {
-    if (document.webkitIsFullScreen) {
-        console.log('hello')
-        document.webkitExitFullscreen()
+
+    if (screenfull.isFullscreen) {
         document.getElementById('fullscreenButton').src=fullscreenOpen
+        screenfull.exit()
     } else {
-        console.log('goodbye')
-        root.webkitRequestFullscreen()
         document.getElementById('fullscreenButton').src=fullscreenClose
+        screenfull.request(root)
         }
 }
 
