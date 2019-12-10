@@ -11,7 +11,7 @@ class AppBtn extends React.Component {
 
         return (
             <div>
-                <img onClick={() => showAppList()} className='appBtn' src={circle} alt='app list' />
+                <img onClick={() => showAppList()} className='appBtn' src={circle} alt='app list'/>
             </div>
         )
     }
