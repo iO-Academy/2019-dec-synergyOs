@@ -12,7 +12,7 @@ const toggleFullscreen = () => {
         screenfull.exit()
     } else {
         document.getElementById('fullscreenButton').src = fullscreenClose
-        screenfull.request(root)
+        screenfull.request()
     }
 }
 
