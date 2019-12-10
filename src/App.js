@@ -12,7 +12,7 @@ class App extends Component {
       apps: {
       },
       activeApp: '',
-      currentZ: '1'
+      currentZ: '1',
     }
   }
 
@@ -44,7 +44,7 @@ class App extends Component {
       openApp: this.setAppOpen,
       closeApp: this.setAppClosed,
       activateApp: this.setAppActive,
-      currentZ: this.state.currentZ
+      currentZ: this.state.currentZ,
     }
 
     return (

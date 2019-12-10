@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import AboutApp from './Apps/About/AboutApp'
 import AppList from '../Menu/AppList'
-import GiphyApp from './Apps//Giphy/Giphy'
+import './Apps/Apps.css'
+import GiphyApp from './Apps/Giphy/Giphy'
 
 class Desktop extends Component {
     constructor(props) {

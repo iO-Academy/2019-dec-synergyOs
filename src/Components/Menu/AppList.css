@@ -7,6 +7,7 @@
     bottom: 51px;
     margin: 5px;
     display: none;
+    font-size: 20px;
 }
 
 .AppListInternal {
@@ -23,6 +24,14 @@
     list-style: none;
 }
 
-.AppListHover:hover {
+.AppContainer{
+    display: flex;
+}
+.AppContainer:hover {
     background-color: #CACACA;
+}
+
+.AppIcon{
+    transform: scale(0.6);
+    height: 40px;
 }
