@@ -1,20 +1,20 @@
-.aboutContent{
+.aboutContent {
     text-align: center;
     margin: 20px;
 }
 
-.aboutContact{
+.aboutContact {
     margin-top: 20px;
     display: inline-flex;
     align-items: center;
 }
 
-.aboutHeadshot{
+.aboutHeadshot {
     height: 80px;
     border: 2px solid #000000;
 }
 
-.aboutName{
+.aboutName {
     font-size: 23px;
     margin: 20px;
     text-decoration: none;
