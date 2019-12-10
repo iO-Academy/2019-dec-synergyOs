@@ -1,4 +1,4 @@
-.MenuBar{
+.MenuBar {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -17,7 +17,7 @@
     float: right;
 }
 
- #fullscreenButton {
+#fullscreenButton {
     float: left;
     height: 20px;
     margin-right: 10px;
