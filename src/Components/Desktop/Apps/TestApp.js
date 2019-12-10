@@ -87,6 +87,7 @@ class TestApp extends React.Component {
                 </div>
                 <div className="app-content">
                     <h1>TestApp</h1>
+                    <p>i am some text</p>
                 </div>
             </div>
         )

@@ -21,7 +21,9 @@
   }
 
   .app .topBar button {
-    background-color: #000000;
+    background-color: rgb(247, 84, 84);
+    border: 2px solid black;
+    border-radius: 4px;
     color: #ffffff
   }
   
