@@ -30,6 +30,6 @@ A game where you must protect the falling cows, abducted by aliens, from parachu
 
 Allows you to use Codepen to make Pens inside SynergyOS
 
-### Calculator app
+### Calculator app
 
 A calcualtor app, from [Windows 93](http://windows93.net)
