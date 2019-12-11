@@ -1,5 +1,6 @@
 import React from "react";
 import './Themes.css'
+import '../AppsDark.css'
 import dragApp from '../AppDragger'
 import resizeApp from '../AppResizer'
 import logo from '../../../../res/synergyoslogo.png'
