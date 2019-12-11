@@ -80,7 +80,7 @@ class ThemesApp extends React.Component {
                     <div>
                         <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink', logo)}}>Default</button>
                         <button className='themeBtn' onClick={() => {this.setTheme('dark', '#323844', logoDark)}}>Dark</button>
-                        <button className='themeBtn' onClick={() => {this.setTheme('gradient', 'red')}}>Gradient</button>
+                        {/*<button className='themeBtn' onClick={() => {this.setTheme('gradient', 'red')}}>Gradient</button>*/}
                         <button className='themeBtn' onClick={() => {this.setTheme('bad', 'bisque')}}>Bad</button>
                     </div>
 
