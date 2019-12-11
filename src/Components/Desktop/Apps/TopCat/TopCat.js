@@ -83,7 +83,7 @@ class TopCat extends React.Component {
                     <p>{this.state.name}</p>
                 </div>
                 <div className="app-content" style={appMinWidths}>
-                <iframe src='http://dev.maydenacademy.co.uk/projects/2019Jul/2019-top-cat/'></iframe>
+                <iframe title="TopCat" src='http://dev.maydenacademy.co.uk/projects/2019Jul/2019-top-cat/'></iframe>
                 </div>
                 <div className="app-statusBar">
                     <div onPointerDown={e => {
