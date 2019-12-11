@@ -14,7 +14,7 @@ class Intro extends Component{
         return(
             <div className="video">
                 <video onClick={endVid} onEnded={() => endVid()} width='640px' height="100%" src={vid}type="video/mp4"></video>
-                <button id="start" onClick={() => {document.querySelector('video').play()}}>START SYNERGY OS</button>
+                <button id="start" onClick={(e) => {e.target.remove(); document.querySelector('video').play()}}>START SYNERGY OS</button>
             </div>
             
         )
