@@ -31,8 +31,6 @@ class Nyan extends React.Component {
                 name: this.state.name,
                 visibility: this.props.desktopState.currentApps[this.state.name],
             })
-
-            // this.getRandomGif()
         }
 
         let app = document.getElementById(this.state.name)
