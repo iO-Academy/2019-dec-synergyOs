@@ -71,7 +71,7 @@ class App extends Component {
       currentTheme: this.state.theme,
       backgroundColor: this.state.color,
       setColor: this.setColor,
-      backgroundImg: this.setBackgroundImg
+      setBackgroundImg: this.setBackgroundImg
 
     }
     document.getElementById('root').classList = ''
