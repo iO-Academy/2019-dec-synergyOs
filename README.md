@@ -1,6 +1,6 @@
 # SynergyOS
 
-A Browser based OS 
+A Browser based OS, created using React
 
 ## Apps
 
