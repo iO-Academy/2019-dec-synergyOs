@@ -1,5 +1,6 @@
 # SynergyOS
-## A Browser based OS 
+
+A Browser based OS 
 
 ## Apps
 
