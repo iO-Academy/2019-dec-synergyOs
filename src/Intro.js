@@ -6,7 +6,6 @@ function endVid() {
     document.querySelector('video').parentElement.outerHTML = ""
     document.querySelector('.desktop').classList.remove('closed')
     document.querySelector('.MenuBar').classList.remove('closed')
-    
 }
 
 class Intro extends Component{
@@ -19,11 +18,9 @@ class Intro extends Component{
                     <video onClick={endVid} onPlay={(e) => screenfull.request(e.target)} onEnded={(e) => {screenfull.exit(); endVid()}} width='640px' height="100%" src={vid}type="video/mp4"></video>
                 
                 </div>
-            </div>
-            
+            </div> 
         )
     }
-    
 }
 
 export default Intro
