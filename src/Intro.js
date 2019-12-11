@@ -9,15 +9,11 @@ function endVid() {
 }
 
 class Intro extends Component{
-    componentDidMount() {
-        document.querySelector('video').play()
-    }
-
     render() {
         let height = window.innerHeight * 0.75
         return(
             <div className="video">
-                <video autoplay onLoad={(e) => {e.target.play()}} onEnded={() => endVid()} width={height} height="100%" src={vid}type="video/mp4"></video>
+                <video autoPlay="autoplay" onEnded={() => endVid()} width={height} height="100%" src={vid}type="video/mp4"></video>
             </div>
             
         )
