@@ -10,25 +10,32 @@ class App extends Component {
     super(props);
 
     this.state = {
-      apps: {},
+      currentApps: {},
       activeApp: '',
       currentZ: '1',
-      theme: 'default',
-      color: 'pink',
+      currentTheme: 'default',
+      backgroundColor: 'pink',
       backgroundImg: logo,
-      backgroundSize: '100%'
+      backgroundSize: '100%',
+      openApp: this.setAppOpen,
+      closeApp: this.setAppClosed,
+      activateApp: this.setAppActive,
+      setTheme: this.setCurrentTheme,
+      setColor: this.setColor,
+      setBackgroundImg: this.setBackgroundImg,
+      setBackgroundSize: this.setBackgroundSize
     }
   }
 
   setAppOpen = (appName) => {
     let currentState = this.state
-    currentState.apps[appName] = 'open'
+    currentState.currentApps[appName] = 'open'
     this.setState(currentState)
   }
 
   setAppClosed = (appName) => {
     let currentState = this.state
-    currentState.apps[appName] = 'closed'
+    currentState.currentApps[appName] = 'closed'
     this.setState(currentState)
   }
 
@@ -42,13 +49,13 @@ class App extends Component {
 
   setCurrentTheme = (theme) => {
     let currentState = this.state
-    currentState.theme = theme
+    currentState.currentTheme = theme
     this.setState(currentState)
   }
 
   setColor = (color) => {
     let currentState = this.state
-    currentState.color = color
+    currentState.backgroundColor = color
     this.setState(currentState)
   }
 
@@ -65,32 +72,13 @@ class App extends Component {
   }
 
   render() {
-
-    let appState = {
-      currentApps: this.state.apps,
-      activeApp: this.state.activeApp,
-      openApp: this.setAppOpen,
-      closeApp: this.setAppClosed,
-      activateApp: this.setAppActive,
-      currentZ: this.state.currentZ,
-      setTheme: this.setCurrentTheme,
-
-      // theme stuff
-      currentTheme: this.state.theme,
-      backgroundColor: this.state.color,
-      setColor: this.setColor,
-      setBackgroundImg: this.setBackgroundImg,
-      setBackgroundSize: this.setBackgroundSize
-
-    }
-
     document.getElementById('root').classList = ''
-    document.getElementById('root').classList.add(appState.currentTheme) 
+    document.getElementById('root').classList.add(this.state.currentTheme) 
     return (
       <div>
         <Intro></Intro>
-        <Desktop backgroundImg={this.state.backgroundImg} appState={appState} />
-        <MenuBar currentApps={this.state.apps} openApp={this.setAppOpen} />
+        <Desktop backgroundImg={this.state.backgroundImg} appState={this.state} />
+        <MenuBar currentApps={this.state.currentApps} openApp={this.setAppOpen} />
       </div>
     );
   }
