@@ -1,0 +1,45 @@
+.matrix * {
+cursor: url(http://cur.cursors-4u.net/cursors/cur-6/cur588.cur), auto !important;
+    font-family: 'Helvetica';
+}
+
+.matrix .app {
+    background-color: #000;
+}
+
+.matrix .app .topBar {
+    background: #00FF41;
+}
+
+.matrix .app .topBar button {
+    background-color: #0f9100;
+}
+
+.matrix .app-content {
+    color: #00FF41;
+}
+
+.matrix .AppList {
+    background-color: #000000;
+    color: #00FF41;
+    font-size: 15px;
+}
+
+.matrix:hover {
+    background-color: #9c9c9c;
+    color: #000;
+}
+
+.matrix .AppListHeader {
+    background-color: #00FF41;
+    color: #000;
+    border-bottom: 2px solid #000000;
+}
+
+.matrix .aboutName {
+    color: #93a0ff;
+}
+
+.matrix .active {
+    box-shadow: 5px 5px #00FF41;
+}

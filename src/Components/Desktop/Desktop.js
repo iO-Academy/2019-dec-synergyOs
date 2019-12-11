@@ -16,7 +16,8 @@ class Desktop extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            height: window.innerHeight - 50
+            height: window.innerHeight - 50,
+            backgroundSize: '50%'
         }
     }
 
@@ -49,7 +50,7 @@ class Desktop extends Component {
             backgroundRepeat: `no-repeat`,
             backgroundAttachment: `fixed`,
             backgroundPosition: `center`,
-            backgroundSize: '50%',
+            backgroundSize: this.props.appState.backgroundSize,
             overflow: 'hidden'
         }
         return (
