@@ -3,12 +3,12 @@ import './Themes.css'
 import '../AppsDark.css'
 import '../AppsMatrix.css'
 import '../Apps-bad.css'
+
 import dragApp from '../AppDragger'
 import resizeApp from '../AppResizer'
 import logo from '../../../../res/synergyoslogo.png'
 import logoDark from '../../../../res/synergyoslogoDark.png'
 import matrix from '../../../../res/matrix.jpg'
-
 import sean from '../../../../res/tbwa.png'
 
 class ThemesApp extends React.Component {
@@ -68,7 +68,6 @@ class ThemesApp extends React.Component {
         let appMinWidths = {minWidth: '100px', minHeight: '100px'}
 
         return (
-
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
                  style={this.style}>
                 <div className="topBar" onPointerDown={e => {
