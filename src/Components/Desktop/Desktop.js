@@ -55,7 +55,7 @@ class Desktop extends Component {
             overflow: 'hidden'
         }
         return (
-            <div scroll="no" className='desktop closed' style={this.styles}>
+            <div  scroll="no" className='desktop closed' style={this.styles}>
                 <AboutApp name="About" desktopState={desktopState}/>
                 <GiphyApp name="Giphy" desktopState={desktopState}/>
                 <Music name="Music" desktopState={desktopState}/>
@@ -68,6 +68,7 @@ class Desktop extends Component {
                 <ThemesApp name="Themes" desktopState={desktopState}/>
                 <AppList appData={desktopState}/>
             </div>
+            
         )
     }
 }

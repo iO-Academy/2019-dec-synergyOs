@@ -13,10 +13,10 @@ class Intro extends Component{
 
     render() {
         return(
-            <div onClick={(e) => {screenfull.request(document.querySelector('video')); document.querySelector('video').play(); }}>
-                <button id="start" onClick={(e) => {e.target.remove();screenfull.request(document.querySelector('video')); document.querySelector('video').play(); }}>START SYNERGY OS</button>
+            <div onLoad={() => {if(window.mobilecheck == true) {endVid()}}}>
+                <button id="start" onClick={(e) => { try{e.target.remove(); document.querySelector('video').play(); } catch {endVid()}}}>START SYNERGY OS</button>
                 <div className="video">
-                    <video onClick={endVid} onEnded={(e) => {screenfull.exit(); endVid()}} width='640px' height="100%" src={vid}type="video/mp4"></video>
+                    <video onClick={endVid} onPlay={(e) => screenfull.request(e.target)} onEnded={(e) => {screenfull.exit(); endVid()}} width='640px' height="100%" src={vid}type="video/mp4"></video>
                 
                 </div>
             </div>
