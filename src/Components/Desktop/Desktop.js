@@ -64,7 +64,6 @@ class Desktop extends Component {
                 <Cows name='Cows' desktopState={desktopState}/>
                 <Codepen name='Codepen' desktopState={desktopState}/>
                 <Calculator name="Calculator" desktopState={desktopState}/>
-                <Browser name="Browser" desktopState={desktopState} />
                 <Nyan name="TBWA" desktopState={desktopState}/>
                 <Revelations name="TBWA" desktopState={desktopState}/>
                 <ThemesApp name="Themes" desktopState={desktopState}/>
