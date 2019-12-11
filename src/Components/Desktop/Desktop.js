@@ -48,6 +48,8 @@ class Desktop extends Component {
             backgroundSize: this.props.appState.backgroundSize,
             overflow: 'hidden'
         }
+
+        console.log(this.styles.backgroundSize)
         return (
             <div  scroll="no" className='desktop closed' style={this.styles}>
                 <AboutApp name="About" desktopState={desktopState}/>

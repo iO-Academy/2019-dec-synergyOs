@@ -16,7 +16,7 @@ class App extends Component {
       currentTheme: 'default',
       backgroundColor: 'pink',
       backgroundImg: logo,
-      backgroundSize: '100%',
+      backgroundSize: '50%',
       openApp: this.setAppOpen,
       closeApp: this.setAppClosed,
       activateApp: this.setAppActive,

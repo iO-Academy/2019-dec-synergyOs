@@ -17,6 +17,10 @@
     float: right;
 }
 
+.menuAppBtn:hover  {
+
+}
+
 #fullscreenButton {
     float: left;
     height: 20px;

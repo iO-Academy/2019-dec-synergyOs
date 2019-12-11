@@ -87,12 +87,12 @@ class ThemesApp extends React.Component {
                     <p>Select your preferred theme below</p>
 
                     <div>
-                        <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink', logo)}}>Default</button>
-                        <button id="darkBtn" className='themeBtn' onClick={() => {this.setTheme('dark', '#323844', logoDark)}}>Dark</button>
+                        <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink', logo); this.setThemeBackgroundSize('50%')}}>Default</button>
+                        <button id="darkBtn" className='themeBtn' onClick={() => {this.setTheme('dark', '#323844', logoDark); this.setThemeBackgroundSize('50%')}}>Dark</button>
                         <button id="matrixBtn" className='themeBtn' onClick={() => {this.setTheme('matrix', '#00FF41', matrix); this.setThemeBackgroundSize('100%')}}>Matrix</button>
-                        {/* <button className='themeBtn' onClick={() => {this.setTheme('gradient', 'red')}}>Gradient</button>*/}
+                        {/* <button className='themeBtn' onClick={() => {this.setTheme('gradient', 'red'); this.setThemeBackgroundSize('50%')}}>Gradient</button>*/}
                         <button id="more" className='themeBtn' onClick={(e) =>{e.target.classList.add('closed'); document.getElementById('tbwa').classList.remove('closed')} }>More...</button>
-                        <button id="tbwa" className='themeBtn closed' onClick={() => {this.setTheme('bad', 'bisque', sean);}}>TBWA</button>
+                        <button id="tbwa" className='themeBtn closed' onClick={() => {this.setTheme('bad', 'bisque', sean); this.setThemeBackgroundSize('50%')}}>TBWA</button>
                     </div>
 
                 </div>
