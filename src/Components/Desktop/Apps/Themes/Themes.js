@@ -81,10 +81,10 @@ class ThemesApp extends React.Component {
 
                     <div>
                         <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink', logo)}}>Default</button>
-                        <button className='themeBtn' onClick={() => {this.setTheme('dark', '#323844', logoDark)}}>Dark</button>
-                        <button className='themeBtn' onClick={() => {this.setTheme('gradient', 'red')}}>Gradient</button>
-                        <button id="more" className='themeBtn' onDoubleClick={(e) =>{e.target.classList.add('closed'); document.getElementById('tbwa').classList.remove('closed')} }>More...</button>
-                        <button id="tbwa" className='themeBtn closed' onDoubleClick={() => {this.setTheme('bad', 'bisque', sean);}}>TBWA</button>
+                        <button className='themeBtn' onClick={() => {this.setTheme('dark', '#323844', logoDark)}}>Dark</button>          
+                        {/* <button className='themeBtn' onClick={() => {this.setTheme('gradient', 'red')}}>Gradient</button>*/}
+                        <button id="more" className='themeBtn' onClick={(e) =>{e.target.classList.add('closed'); document.getElementById('tbwa').classList.remove('closed')} }>More...</button>
+                        <button id="tbwa" className='themeBtn closed' onClick={() => {this.setTheme('bad', 'bisque', sean);}}>TBWA</button>
                     </div>
 
                 </div>

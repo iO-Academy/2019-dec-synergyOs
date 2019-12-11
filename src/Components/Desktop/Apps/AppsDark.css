@@ -1,4 +1,5 @@
 .dark * {
+cursor: url(http://cur.cursors-4u.net/cursors/cur-6/cur588.cur), auto !important;
     font-family: 'Helvetica';
 }
 
@@ -28,4 +29,12 @@
 .dark .AppListHeader {
     background-color: #4f4f75;
     border-bottom: 2px solid #000000;
+}
+
+.dark .aboutName {
+    color: #93a0ff;
+}
+
+.dark .active {
+    box-shadow: 5px 5px rgba(149, 149, 149, 0.38);
 }
