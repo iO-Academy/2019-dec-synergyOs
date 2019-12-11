@@ -9,6 +9,7 @@ import Music from './Apps/Music/Music'
 import Nyan from './Apps/Nyan/Nyan'
 import Revelations from './Apps/Revelations/Revelations'
 import TopCat from './Apps/TopCat/TopCat'
+import Cows from "./Apps/Cows/Cows";
 
 class Desktop extends Component {
     constructor(props) {
@@ -34,7 +35,7 @@ class Desktop extends Component {
     componentDidUpdate() {
         var theme = this.props.theme
         var varLOL = 'hello'
-    
+
     }
 
     render() {
@@ -54,10 +55,11 @@ class Desktop extends Component {
             <div scroll="no" className='desktop' style={this.styles}>
                 <AboutApp name="About" desktopState={desktopState}/>
                 <GiphyApp name="Giphy" desktopState={desktopState}/>
-                <Music name="Music" desktopState={desktopState} />
-                <TopCat name='TopCat' desktopState={desktopState} />
-                <Nyan name="TBWA" desktopState={desktopState} />
-                <Revelations name="TBWA" desktopState={desktopState} />
+                <Music name="Music" desktopState={desktopState}/>
+                <TopCat name='TopCat' desktopState={desktopState}/>
+                <Cows name='Cows' desktopState={desktopState}/>
+                <Nyan name="TBWA" desktopState={desktopState}/>
+                <Revelations name="TBWA" desktopState={desktopState}/>
                 <ThemesApp name="Themes" desktopState={desktopState}/>
                 <AppList appData={desktopState}/>
             </div>
