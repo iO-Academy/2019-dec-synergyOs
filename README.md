@@ -41,7 +41,7 @@ Easter egg included (hint: devtools)
 
 ---
 
-SynergyOS was made by:
+*SynergyOS was made by:*
 
 [Alex Day (@sodukufan)](https://github.com/sudokufan)
 
