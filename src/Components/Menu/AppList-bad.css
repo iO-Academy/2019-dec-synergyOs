@@ -1,0 +1,38 @@
+.bad .AppList {
+    border: 2px solid #ff00f2;
+    background-color: #00e1ff;
+    transform: scale(3);
+    right: 100px;
+    bottom: 250px;
+}
+
+.bad .AppIcon {
+    display: none;
+}
+
+.bad .AppListHeader {
+    background-color: rgb(102, 255, 0);
+    border-bottom: 2px solid #f00;
+    transition: all 1s linear;
+}
+
+.bad .AppListHeader:hover {
+    transform: scale(10);
+}
+
+.bad .AppContainer {
+    transition: all 0.5s linear;
+}
+
+.bad .AppContainer:hover {
+    color: white;
+    background-color: #ff0000;
+    transform: rotate(360deg);
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+}
+
+.bad * {
+    cursor: url(http://ani.cursors-4u.net/cursors/cur-13/cur1157.ani), url(http://ani.cursors-4u.net/cursors/cur-13/cur1157.png), auto !important;
+}

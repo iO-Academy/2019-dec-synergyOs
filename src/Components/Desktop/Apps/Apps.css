@@ -1,7 +1,3 @@
-.bad * {
-    font-family: 'Comic Sans MS';
-}
-
 .app {
     background-color: #ffffff;
     position: absolute;
@@ -22,6 +18,14 @@
 .app .topBar * {
     display: inline;
     margin: 3px;
+}
+
+.app .topBar:hover {
+    cursor: grab;
+}
+
+.app .topBar:active {
+    cursor: grabbing;
 }
 
 .app .topBar button {
