@@ -11,6 +11,7 @@ import Revelations from './Apps/Revelations/Revelations'
 import TopCat from './Apps/TopCat/TopCat'
 import Calculator from './Apps/Calculator/Calcualtor'
 import Cows from "./Apps/Cows/Cows";
+import Codepen from "./Apps/Codepen/Codepen"
 
 class Desktop extends Component {
     constructor(props) {
@@ -60,6 +61,7 @@ class Desktop extends Component {
                 <Music name="Music" desktopState={desktopState}/>
                 <TopCat name='TopCat' desktopState={desktopState}/>
                 <Cows name='Cows' desktopState={desktopState}/>
+                <Codepen name='Codepen' desktopState={desktopState}/>
                 <Calculator name="Calculator" desktopState={desktopState}/>
                 <Nyan name="TBWA" desktopState={desktopState}/>
                 <Revelations name="TBWA" desktopState={desktopState}/>
