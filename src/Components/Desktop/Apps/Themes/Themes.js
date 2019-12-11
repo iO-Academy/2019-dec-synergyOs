@@ -20,14 +20,11 @@ class ThemesApp extends React.Component {
             name: appName,
             visibility: this.props.desktopState.currentApps[appName],
         }
-
         this.style = {
             top: Math.floor(Math.random() * window.innerHeight / 2),
             left: Math.floor(Math.random() * window.innerWidth / 2)
         }
-
         this.props.desktopState.closeApp(appName)
-
     }
 
     componentDidUpdate(prevProps) {
@@ -37,7 +34,7 @@ class ThemesApp extends React.Component {
                 visibility: this.props.desktopState.currentApps[this.state.name],
             })
         }
-
+        
         let app = document.getElementById(this.state.name)
 
         if (this.props.desktopState.activeApp === this.state.name) {
