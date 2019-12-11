@@ -86,7 +86,6 @@ class ThemesApp extends React.Component {
                         <button className='themeBtn' onClick={() => {this.setTheme('bad', 'bisque', sean)}}>TBWA</button>
                     </div>
 
-
                 </div>
                 <div className="app-statusBar">
                     <div onPointerDown={e => {
