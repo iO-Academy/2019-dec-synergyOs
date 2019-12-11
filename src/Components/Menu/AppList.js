@@ -24,7 +24,7 @@ class AppList extends Component {
 
         const apps = Object.getOwnPropertyNames(this.props.appData.currentApps)
         const listItems = apps.map((appName) =>
-            <div className='AppContainer'>
+            <div id={`${appName}app`}className='AppContainer'>
                 <img className='AppIcon' src={this.appIcons[appName]} alt='icon' />
                 <li onClick={() => this.props.appData.openApp(appName)} key={appName} className='AppListItem'>{appName}</li>
             </div>

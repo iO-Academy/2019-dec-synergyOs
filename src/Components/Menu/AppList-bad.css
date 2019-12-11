@@ -2,8 +2,8 @@
     border: 2px solid #ff00f2;
     background-color: #00e1ff;
     transform: scale(3);
-    right: 100px;
-    bottom: 250px;
+    right: 10%;
+    bottom: 40%;
 }
 
 .bad .AppIcon {
@@ -35,4 +35,8 @@
 
 .bad * {
     cursor: url(http://ani.cursors-4u.net/cursors/cur-13/cur1157.ani), url(http://ani.cursors-4u.net/cursors/cur-13/cur1157.png), auto !important;
+}
+
+.bad #TBWAapp {
+    display: inline;
 }

@@ -1,21 +1,18 @@
 import React from "react";
-import './Themes.css'
-import '../AppsDark.css'
+import '../Apps.css'
 import dragApp from '../AppDragger'
 import resizeApp from '../AppResizer'
-import logo from '../../../../res/synergyoslogo.png'
-import logoDark from '../../../../res/synergyoslogoDark.png'
+import './Giphy.css'
 
-import sean from '../../../../res/tbwa.png'
+class Nyan extends React.Component {
 
-class ThemesApp extends React.Component {
     constructor(props) {
         super(props)
         let appName = this.props.name
-        console.log(this.props.desktopState.currentApps[appName])
         this.state = {
             name: appName,
             visibility: this.props.desktopState.currentApps[appName],
+            gifUrl: 'http://giphygifs.s3.amazonaws.com/media/sIIhZliB2McAo/giphy.gif'
         }
 
         this.style = {
@@ -33,6 +30,8 @@ class ThemesApp extends React.Component {
                 name: this.state.name,
                 visibility: this.props.desktopState.currentApps[this.state.name],
             })
+
+            // this.getRandomGif()
         }
 
         let app = document.getElementById(this.state.name)
@@ -50,18 +49,11 @@ class ThemesApp extends React.Component {
         app.style.zIndex = zIndex
     }
 
-    setTheme = (theme, color, background) => {
-        this.props.desktopState.setTheme(theme)
-        this.props.desktopState.setColor(color)
-        this.props.desktopState.setBackgroundImg(background)
-    }
-
     render() {
 
         let appMinWidths = {minWidth: '100px', minHeight: '100px'}
 
         return (
-
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
                  style={this.style}>
                 <div className="topBar" onPointerDown={e => {
@@ -69,24 +61,14 @@ class ThemesApp extends React.Component {
                 }}>
                     <button onClick={() => {
                         this.props.desktopState.closeApp(this.state.name);
-                        console.log(this.state.name)
                     }}>X
                     </button>
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
-                <div className="app-content themesContainer" style={appMinWidths}>
-                    <h1>Themes</h1>
-                    <p>Select your preferred theme below</p>
-
-                    <div>
-                        <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink', logo)}}>Default</button>
-                        <button className='themeBtn' onClick={() => {this.setTheme('dark', '#323844', logoDark)}}>Dark</button>
-                        <button className='themeBtn' onClick={() => {this.setTheme('gradient', 'red')}}>Gradient</button>
-                        <button id="more" className='themeBtn' onDoubleClick={(e) =>{e.target.classList.add('closed'); document.getElementById('tbwa').classList.remove('closed')} }>More...</button>
-                        <button id="tbwa" className='themeBtn closed' onDoubleClick={() => {this.setTheme('bad', 'bisque', sean);}}>TBWA</button>
-                    </div>
-
+                <div className="app-content" style={appMinWidths}>
+                    <img title="gif" id="gif-hole" src={this.state.gifUrl}
+                         alt="a GIF"></img>
                 </div>
                 <div className="app-statusBar">
                     <div onPointerDown={e => {
@@ -98,4 +80,4 @@ class ThemesApp extends React.Component {
     }
 }
 
-export default ThemesApp
+export default Nyan

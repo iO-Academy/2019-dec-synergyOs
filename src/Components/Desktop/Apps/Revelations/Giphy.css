@@ -1,0 +1,11 @@
+#TBWA .app-content {
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+}
+
+#TBWA .app-content img {
+    width: 100%;
+    height: 100%;
+}
+
