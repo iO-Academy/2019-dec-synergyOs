@@ -2,6 +2,7 @@ import React from "react";
 import './Themes.css'
 import dragApp from '../AppDragger'
 import resizeApp from '../AppResizer'
+import logo from '../../../../res/synergyoslogo.png'
 import logoDark from '../../../../res/synergyoslogoDark.png'
 
 class ThemesApp extends React.Component {
@@ -76,8 +77,8 @@ class ThemesApp extends React.Component {
                     <p>Select your preferred theme below</p>
 
                     <div>
-                        <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink')}}>Default</button>
-                        <button className='themeBtn' onClick={() => {this.setTheme('dark', 'blue', logoDark)}}>Dark</button>
+                        <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink', logo)}}>Default</button>
+                        <button className='themeBtn' onClick={() => {this.setTheme('dark', '#323844', logoDark)}}>Dark</button>
                         <button className='themeBtn' onClick={() => {this.setTheme('gradient', 'red')}}>Gradient</button>
                         <button className='themeBtn' onClick={() => {this.setTheme('bad', 'bisque')}}>Bad</button>
                     </div>
