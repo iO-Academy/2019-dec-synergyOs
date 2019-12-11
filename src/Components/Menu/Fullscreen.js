@@ -3,6 +3,7 @@ import screenfull from 'screenfull'
 import fullscreenClose from '../../res/fullscreenClose.svg'
 import fullscreenOpen from '../../res/fullscreenOpen.svg'
 
+
 const toggleFullscreen = () => {
 
     if (screenfull.isFullscreen) {
