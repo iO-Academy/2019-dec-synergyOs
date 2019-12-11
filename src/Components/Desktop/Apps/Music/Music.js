@@ -22,6 +22,14 @@ class Music extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
+        if(this.state.visibility !== this.props.desktopState.currentApps[this.state.name]) {
+            if(this.props.desktopState.currentApps[this.state.name] === 'open') {
+                this.addIframe()
+            }
+        }
+
+
+        
         if (prevProps !== this.props) {
             this.setState({
                 name: this.state.name,
@@ -44,6 +52,17 @@ class Music extends React.Component {
         app.style.zIndex = zIndex
     }
 
+    removeIframe = () => {
+        let thisApp = document.getElementById(this.state.name)
+        thisApp.querySelector('iframe').remove()
+    }
+
+    addIframe = () => {
+        let thisApp = document.getElementById(this.state.name)
+        thisApp.querySelector('.app-content').innerHTML = `<iframe title="Synergy FM" width="100%" height="600" scrolling="no" frameborder="no"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/942416575&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>`
+    }
+
     render() {
 
         let appMinWidths = {minWidth: '100px', minHeight: '100px', maxHeight: '650px'}
@@ -56,6 +75,7 @@ class Music extends React.Component {
                 }}>
                     <button onClick={() => {
                         this.props.desktopState.closeApp(this.state.name);
+                        this.removeIframe()
                         console.log(this.state.name)
                     }}>X
                     </button>
