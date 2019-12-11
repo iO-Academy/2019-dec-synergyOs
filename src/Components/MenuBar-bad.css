@@ -1,0 +1,9 @@
+.bad .MenuBar {
+    color: white;
+    background-color: greenyellow;
+    transition: all 0.1s linear 0.5s;
+}
+
+.bad .MenuBar:hover {
+    background-color: hotpink;
+}
