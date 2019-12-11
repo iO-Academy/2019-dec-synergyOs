@@ -74,6 +74,7 @@ class GiphyApp extends React.Component {
                         this.props.desktopState.closeApp(this.state.name);
                     }}>X
                     </button>
+                    <button onClick={this.getRandomGif} id="newgif">New Gif</button>
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
