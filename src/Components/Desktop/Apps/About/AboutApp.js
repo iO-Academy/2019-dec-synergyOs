@@ -85,9 +85,17 @@ class TestApp extends React.Component {
                         <div className='aboutContactBox'>
                             <img src={josh} alt='headshot' className='aboutHeadshot'/>
                             <a href='https://github.com/jdselby24' className='aboutName'>@jbselby24</a>
+                            
                         </div>
                     </div>
+                    <div className="credits">
+                        <p>CREDITS:</p>
+                        <p>Icons from <a href="https://icons8.com">Icons8</a></p>
+                        <p><a href="http://windows93.net">Windows93</a> for Calculator App</p>
+                    </div>
                 </div>
+                
+                
 
                 <div className="app-statusBar">
                     <div onPointerDown={e => {
