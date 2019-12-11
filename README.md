@@ -6,7 +6,7 @@ A Browser based OS
 
 Here is some detail about each of the apps in SynergyOS
 
-### About app
+### About app
 
 Displays information about the OS
 
