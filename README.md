@@ -43,7 +43,9 @@ Easter egg included (hint: devtools)
 
 SynergyOS was made by:
 [Alex Day (@sodukufan)](https://github.com/sudokufan)
+
 [Anton Webb (@anton25360)](https://github.com/anton25360)
+
 [Josh Selby (@jdselby24)](https://github.com/jdselby24)
 
 Made at [Mayden Academy](https://mayden.academy/) with help from [Charlie Cogg](https://github.com/charliecog), [Ashley Coles](https://github.com/ashleycoles) and [Mike Oram](https://github.com/mporam)
