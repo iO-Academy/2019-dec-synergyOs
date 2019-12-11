@@ -9,6 +9,7 @@ cursor: url(http://cur.cursors-4u.net/cursors/cur-6/cur588.cur), auto !important
 
 .matrix .app .topBar {
     background: #00FF41;
+    color: #000;
 }
 
 .matrix .app .topBar button {
