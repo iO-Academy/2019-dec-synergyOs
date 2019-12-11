@@ -92,6 +92,7 @@ class TestApp extends React.Component {
                         <p>CREDITS:</p>
                         <p>Icons from <a href="https://icons8.com">Icons8</a></p>
                         <p><a href="http://windows93.net">Windows93</a> for Calculator App</p>
+                        <p>Made with <a href="http://reactjs.com">React</a></p>
                     </div>
                 </div>
                 
