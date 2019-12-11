@@ -36,12 +36,6 @@ class Desktop extends Component {
         window.removeEventListener('resize', this.updateDimensions)
     }
 
-    componentDidUpdate() {
-        var theme = this.props.theme
-        var varLOL = 'hello'
-
-    }
-
     render() {
         let desktopState = this.props.appState
         this.styles = {
