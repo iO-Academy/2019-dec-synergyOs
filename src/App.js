@@ -12,7 +12,8 @@ class App extends Component {
       apps: {},
       activeApp: '',
       currentZ: '1',
-      theme: 'default'
+      theme: 'default',
+      color: 'pink'
     }
   }
 
@@ -33,7 +34,7 @@ class App extends Component {
     currentState.activeApp = appName
     currentState.currentZ++
     this.setState(currentState)
-    return(currentState.currentZ)
+    return (currentState.currentZ)
   }
 
   setCurrentTheme = (theme) => {
@@ -41,6 +42,28 @@ class App extends Component {
     currentState.theme = theme
     this.setState(currentState)
   }
+
+  setColor = (color) => {
+    let currentState = this.state
+    currentState.color = color
+    this.setState(currentState)
+  }
+
+  // componentDidUpdate(prevProps) {
+  //   console.log('component updating');
+  //   if (prevProps != this.props) {
+
+  //     var x = this.state.theme
+  //     console.log(x);
+  //     // var col = 'red'
+
+
+  //     if (x === 'dark') {
+  //       this.setColor('blue')
+  //     }
+
+  //   }
+  // }
 
   render() {
 
@@ -51,13 +74,19 @@ class App extends Component {
       closeApp: this.setAppClosed,
       activateApp: this.setAppActive,
       currentZ: this.state.currentZ,
-      setTheme: this.setCurrentTheme
+      setTheme: this.setCurrentTheme,
+
+      // theme stuff
+      currentTheme: this.state.theme,
+      backgroundColor: this.state.color,
+      setColor: this.setColor,
+
     }
 
     return (
       <div>
-          <Desktop background='#D8AEB6' backgroundImg={logo} appState={appState} theme={this.state.theme} />
-          <MenuBar currentApps={this.state.apps} openApp={this.setAppOpen}/>
+        <Desktop backgroundImg={logo} appState={appState} />
+        <MenuBar currentApps={this.state.apps} openApp={this.setAppOpen} />
       </div>
     );
   }

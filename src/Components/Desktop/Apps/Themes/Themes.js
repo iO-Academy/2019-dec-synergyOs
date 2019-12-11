@@ -47,14 +47,20 @@ class ThemesApp extends React.Component {
 
     selectTheme1 = () => {
         this.props.desktopState.setTheme('default')
+        this.props.desktopState.setColor('pink')
+
     }
 
     selectTheme2 = () => {
         this.props.desktopState.setTheme('dark')
+        this.props.desktopState.setColor('blue')
+
     }
 
     selectTheme3 = () => {
         this.props.desktopState.setTheme('other')
+        this.props.desktopState.setColor('red')
+
     }
 
     render() {

@@ -29,16 +29,39 @@ class Desktop extends Component {
 
     componentDidUpdate() {
         var theme = this.props.theme
-        
-        
+        var varLOL = 'hello'
+    
     }
 
     render() {
         let desktopState = this.props.appState
+
+        let currentTheme = this.props.appState.currentTheme
+        console.log(currentTheme);
+
+        var backgroundColor
+
+        switch (currentTheme) {
+            case 'default':
+                backgroundColor = 'pink'
+                break;
+
+            case 'default':
+                backgroundColor = 'pink'
+                break;
+
+            case 'default':
+                backgroundColor = 'pink'
+                break;
+        
+            default:
+                break;
+        }
+        
         this.styles = {
             width: '100%',
             height: this.state.height,
-            backgroundColor: this.props.background,
+            backgroundColor: this.props.appState.backgroundColor,
             backgroundImage: ` url(${this.props.backgroundImg})`,
             backgroundRepeat: `no-repeat`,
             backgroundAttachment: `fixed`,
