@@ -39,7 +39,7 @@ A calcualtor app, from [Windows 93](http://windows93.net)
 Allows you to change the OS theme
 Easter egg included (hint: devtools)
 
-=====
+---
 
 SynergyOS was made by:
 
