@@ -49,22 +49,6 @@ class App extends Component {
     this.setState(currentState)
   }
 
-  // componentDidUpdate(prevProps) {
-  //   console.log('component updating');
-  //   if (prevProps != this.props) {
-
-  //     var x = this.state.theme
-  //     console.log(x);
-  //     // var col = 'red'
-
-
-  //     if (x === 'dark') {
-  //       this.setColor('blue')
-  //     }
-
-  //   }
-  // }
-
   render() {
 
     let appState = {
