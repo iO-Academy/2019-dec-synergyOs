@@ -66,7 +66,8 @@ class App extends Component {
       setColor: this.setColor,
 
     }
-
+    document.getElementById('root').classList = ''
+    document.getElementById('root').classList.add(appState.currentTheme) 
     return (
       <div>
         <Desktop backgroundImg={logo} appState={appState} />
