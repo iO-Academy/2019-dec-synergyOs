@@ -52,7 +52,7 @@ class Revelations extends React.Component {
 
     render() {
 
-        let appMinWidths = {minWidth: '400px', minHeight: '100px'}
+        let appMinWidths = {minWidth: '400px', minHeight: '100px', maxWidth: '100px'}
 
         return (
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
