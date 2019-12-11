@@ -9,6 +9,7 @@ import Music from './Apps/Music/Music'
 import Nyan from './Apps/Nyan/Nyan'
 import Revelations from './Apps/Revelations/Revelations'
 import TopCat from './Apps/TopCat/TopCat'
+import Calculator from './Apps/Calculator/Calcualtor'
 
 class Desktop extends Component {
     constructor(props) {
@@ -56,6 +57,7 @@ class Desktop extends Component {
                 <GiphyApp name="Giphy" desktopState={desktopState}/>
                 <Music name="Music" desktopState={desktopState} />
                 <TopCat name='TopCat' desktopState={desktopState} />
+                <Calculator name="Calculator" desktopState={desktopState} />
                 <Nyan name="TBWA" desktopState={desktopState} />
                 <Revelations name="TBWA" desktopState={desktopState} />
                 <ThemesApp name="Themes" desktopState={desktopState}/>

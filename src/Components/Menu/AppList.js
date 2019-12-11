@@ -7,6 +7,7 @@ import GiphyIcon from '../../res/icons/video.svg'
 import ThemeIcon from '../../res/icons/settings.svg'
 import MusicIcon from '../../res/icons/music.svg'
 import TopCatIcon from '../../res/icons/cat.png'
+import CalculatorIcon from '../../res/icons/calculator.png'
 
 class AppList extends Component {
 
@@ -16,6 +17,7 @@ class AppList extends Component {
         Themes: ThemeIcon,
         Music: MusicIcon,
         TopCat: TopCatIcon,
+        Calculator: CalculatorIcon
     }
 
     badOpener = () => {
