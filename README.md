@@ -51,9 +51,9 @@ Easter egg included (hint: devtools)
 
 Made at [Mayden Academy](https://mayden.academy/) with help from [Charlie Cogg](https://github.com/charliecog), [Ashley Coles](https://github.com/ashleycoles) and [Mike Oram](https://github.com/mporam)
 
-Project boostrapped with [create-react-app](https://github.com/facebook/create-react-app)
+*Project boostrapped with [create-react-app](https://github.com/facebook/create-react-app)*
 
-Credits to:
+**Credits to:**
 
 [Giphy](http://giphy.com) for their API
 
