@@ -27,7 +27,7 @@ class ThemesApp extends React.Component {
             this.setState({
                 name: this.state.name,
                 visibility: this.props.desktopState.currentApps[this.state.name],
-            })            
+            })
         }
 
         let app = document.getElementById(this.state.name)
@@ -65,12 +65,12 @@ class ThemesApp extends React.Component {
 
     render() {
 
-        let appMinWidths = { minWidth: '100px', minHeight: '100px' }
+        let appMinWidths = {minWidth: '100px', minHeight: '100px'}
 
         return (
 
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
-                style={this.style}>
+                 style={this.style}>
                 <div className="topBar" onPointerDown={e => {
                     dragApp(e.target, this.activateApp)
                 }}>
@@ -84,18 +84,15 @@ class ThemesApp extends React.Component {
                 </div>
                 <div className="app-content themesContainer" style={appMinWidths}>
                     <h1>Themes</h1>
-                    <p>Select your preferred theme below</p><br /><br />
+                    <p>Select your preferred theme below</p><br/><br/>
 
                     <div>
                         <button className='themeBtn' onClick={this.selectTheme1}>Default</button>
-                        <button className='themeBtn' onClick={this.selectTheme2}>Dark</button><br /><br /><br />
-                        <button className='themeBtn' onClick={this.selectTheme3}>Gradient</button><br /><br />
+                        <button className='themeBtn' onClick={this.selectTheme2}>Dark</button>
+                        <br/><br/><br/>
+                        <button className='themeBtn' onClick={this.selectTheme3}>Gradient</button>
+                        <br/><br/>
                     </div>
-
-
-
-
-
 
 
                 </div>
