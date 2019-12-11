@@ -1,7 +1,10 @@
 import React from "react";
 import './Themes.css'
+import '../AppsDark.css'
 import dragApp from '../AppDragger'
 import resizeApp from '../AppResizer'
+import logo from '../../../../res/synergyoslogo.png'
+import logoDark from '../../../../res/synergyoslogoDark.png'
 
 class ThemesApp extends React.Component {
     constructor(props) {
@@ -45,9 +48,10 @@ class ThemesApp extends React.Component {
         app.style.zIndex = zIndex
     }
 
-    setTheme = (theme, color) => {
+    setTheme = (theme, color, background) => {
         this.props.desktopState.setTheme(theme)
         this.props.desktopState.setColor(color)
+        this.props.desktopState.setBackgroundImg(background)
     }
 
     render() {
@@ -71,11 +75,11 @@ class ThemesApp extends React.Component {
                 </div>
                 <div className="app-content themesContainer" style={appMinWidths}>
                     <h1>Themes</h1>
-                    <p>Select your preferred theme below</p><br/><br/>
+                    <p>Select your preferred theme below</p>
 
                     <div>
-                        <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink')}}>Default</button>
-                        <button className='themeBtn' onClick={() => {this.setTheme('dark', 'blue')}}>Dark</button>
+                        <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink', logo)}}>Default</button>
+                        <button className='themeBtn' onClick={() => {this.setTheme('dark', '#323844', logoDark)}}>Dark</button>
                         <button className='themeBtn' onClick={() => {this.setTheme('gradient', 'red')}}>Gradient</button>
                         <button className='themeBtn' onClick={() => {this.setTheme('bad', 'bisque')}}>Bad</button>
                     </div>

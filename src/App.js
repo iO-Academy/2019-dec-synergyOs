@@ -13,7 +13,8 @@ class App extends Component {
       activeApp: '',
       currentZ: '1',
       theme: 'default',
-      color: 'pink'
+      color: 'pink',
+      backgroundImg: logo
     }
   }
 
@@ -49,6 +50,12 @@ class App extends Component {
     this.setState(currentState)
   }
 
+  setBackgroundImg = (background) => {
+    let currentState = this.state
+    currentState.backgroundImg = background
+    this.setState(currentState)
+  }
+
   render() {
 
     let appState = {
@@ -64,13 +71,14 @@ class App extends Component {
       currentTheme: this.state.theme,
       backgroundColor: this.state.color,
       setColor: this.setColor,
+      setBackgroundImg: this.setBackgroundImg
 
     }
     document.getElementById('root').classList = ''
     document.getElementById('root').classList.add(appState.currentTheme) 
     return (
       <div>
-        <Desktop backgroundImg={logo} appState={appState} />
+        <Desktop backgroundImg={this.state.backgroundImg} appState={appState} />
         <MenuBar currentApps={this.state.apps} openApp={this.setAppOpen} />
       </div>
     );

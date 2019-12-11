@@ -1,0 +1,26 @@
+.dark .app {
+    background-color: #4b4b4b;
+}
+
+.dark .app .topBar button {
+    background-color: #910000;
+}
+
+.dark .app-content {
+    color: #fff;
+}
+
+.dark .AppList {
+    background-color: #000;
+    color: #fff;
+}
+
+.AppContainer:hover {
+    background-color: #9c9c9c;
+    color: #000;
+}
+
+.dark .AppListHeader {
+    background-color: #4f4f75;
+    border-bottom: 2px solid #000000;
+}
