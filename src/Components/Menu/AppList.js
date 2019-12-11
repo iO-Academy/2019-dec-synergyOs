@@ -3,12 +3,14 @@ import './AppList.css'
 
 import AboutIcon from '../../res/icons/question.svg'
 import GiphyIcon from '../../res/icons/video.svg'
+import MusicIcon from '../../res/icons/music.svg'
 
 class AppList extends Component {
 
     appIcons = {
         About: AboutIcon,
-        Giphy: GiphyIcon
+        Giphy: GiphyIcon,
+        Music: MusicIcon
     }
 
     render() {

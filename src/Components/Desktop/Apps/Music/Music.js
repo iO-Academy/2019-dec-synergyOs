@@ -2,18 +2,15 @@ import React from "react";
 import '../Apps.css'
 import dragApp from '../AppDragger'
 import resizeApp from '../AppResizer'
-import './Giphy.css'
 
-class GiphyApp extends React.Component {
-
+class Music extends React.Component {
     constructor(props) {
         super(props)
-        this.getRandomGif()
         let appName = this.props.name
+        console.log(this.props.desktopState.currentApps[appName])
         this.state = {
             name: appName,
             visibility: this.props.desktopState.currentApps[appName],
-            gifUrl: ""
         }
 
         this.style = {
@@ -22,17 +19,20 @@ class GiphyApp extends React.Component {
         }
 
         this.props.desktopState.closeApp(appName)
-
     }
 
     componentDidUpdate(prevProps) {
+        if(this.state.visibility !== this.props.desktopState.currentApps[this.state.name]) {
+            if(this.props.desktopState.currentApps[this.state.name] === 'open') {
+                this.addIframe()
+            }
+        }
+
         if (prevProps !== this.props) {
             this.setState({
                 name: this.state.name,
                 visibility: this.props.desktopState.currentApps[this.state.name],
             })
-
-            // this.getRandomGif()
         }
 
         let app = document.getElementById(this.state.name)
@@ -50,19 +50,19 @@ class GiphyApp extends React.Component {
         app.style.zIndex = zIndex
     }
 
-    getRandomGif = () => {
-        fetch("http://api.giphy.com/v1/gifs/random?api_key=cG6pIvcb28OdKIy6mEkrpuUzuOpRKHDC", {method: 'get'})
-            .then(res => res.json())
-            .then(res => {
-                let currentState = this.state
-                currentState.gifUrl = res.data.images.downsized.url
-                this.setState(currentState)
-            })
+    removeIframe = () => {
+        let thisApp = document.getElementById(this.state.name)
+        thisApp.querySelector('iframe').remove()
+    }
+
+    addIframe = () => {
+        let thisApp = document.getElementById(this.state.name)
+        thisApp.querySelector('.app-content').innerHTML = `<iframe width="100%" height="600" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/942416575&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>`
     }
 
     render() {
 
-        let appMinWidths = {minWidth: '100px', minHeight: '100px'}
+        let appMinWidths = {minWidth: '100px', minHeight: '100px', maxHeight: '650px'}
 
         return (
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
@@ -72,14 +72,15 @@ class GiphyApp extends React.Component {
                 }}>
                     <button onClick={() => {
                         this.props.desktopState.closeApp(this.state.name);
+                        this.removeIframe()
+                        console.log(this.state.name)
                     }}>X
                     </button>
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
                 <div className="app-content" style={appMinWidths}>
-                    <img onClick={this.getRandomGif} title="gif" id="gif-hole" src={this.state.gifUrl}
-                         alt="a GIF"></img>
+                <iframe title="SynergyFM" width="100%" height="600" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/942416575&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                 </div>
                 <div className="app-statusBar">
                     <div onPointerDown={e => {
@@ -91,4 +92,4 @@ class GiphyApp extends React.Component {
     }
 }
 
-export default GiphyApp
+export default Music
