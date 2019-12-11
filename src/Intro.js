@@ -9,11 +9,12 @@ function endVid() {
 }
 
 class Intro extends Component{
+
     render() {
-        let height = window.innerHeight * 0.75
         return(
             <div className="video">
-                <video autoPlay="autoplay" onLoad={(e) => {e.target.play()}} onEnded={() => endVid()} width={height} height="100%" src={vid}type="video/mp4"></video>
+                <video onClick={endVid} onEnded={() => endVid()} width='640px' height="100%" src={vid}type="video/mp4"></video>
+                <button id="start" onClick={() => {document.querySelector('video').play()}}>START SYNERGY OS</button>
             </div>
             
         )

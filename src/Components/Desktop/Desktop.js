@@ -58,7 +58,7 @@ class Desktop extends Component {
             <div scroll="no" className='desktop closed' style={this.styles}>
                 <AboutApp name="About" desktopState={desktopState}/>
                 <GiphyApp name="Giphy" desktopState={desktopState}/>
-                <Music name="Music" desktopState={desktopState}/>
+                {/* <Music name="Music" desktopState={desktopState}/> */}
                 <TopCat name='TopCat' desktopState={desktopState}/>
                 <Cows name='Cows' desktopState={desktopState}/>
                 <Codepen name='Codepen' desktopState={desktopState}/>

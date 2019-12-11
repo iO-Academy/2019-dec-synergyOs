@@ -10,6 +10,11 @@ body {
     background-color: black;
 }
 
+#start {
+    font-size: x-large;
+    margin: 0 auto;
+}
+
 .video {
     margin: 10% 30%;
 }
