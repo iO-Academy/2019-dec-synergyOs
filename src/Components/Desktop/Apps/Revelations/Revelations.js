@@ -3,6 +3,7 @@ import '../Apps.css'
 import dragApp from '../AppDragger'
 import resizeApp from '../AppResizer'
 import './Giphy.css'
+import '../Apps-bad.css'
 
 class Revelations extends React.Component {
 

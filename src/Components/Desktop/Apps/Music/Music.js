@@ -1,5 +1,6 @@
 import React from "react";
 import '../Apps.css'
+import '../Apps-bad.css'
 import dragApp from '../AppDragger'
 import resizeApp from '../AppResizer'
 
