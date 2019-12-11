@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import './App.css'
 import MenuBar from './Components/MenuBar'
 import Desktop from './Components/Desktop/Desktop'
