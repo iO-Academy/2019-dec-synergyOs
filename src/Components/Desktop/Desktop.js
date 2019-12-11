@@ -8,6 +8,7 @@ import ThemesApp from './Apps/Themes/Themes'
 import Music from './Apps/Music/Music'
 import Nyan from './Apps/Nyan/Nyan'
 import Revelations from './Apps/Revelations/Revelations'
+import TopCat from './Apps/TopCat/TopCat'
 
 class Desktop extends Component {
     constructor(props) {
@@ -54,6 +55,7 @@ class Desktop extends Component {
                 <AboutApp name="About" desktopState={desktopState}/>
                 <GiphyApp name="Giphy" desktopState={desktopState}/>
                 <Music name="Music" desktopState={desktopState} />
+                <TopCat name='TopCat' desktopState={desktopState} />
                 <Nyan name="TBWA" desktopState={desktopState} />
                 <Revelations name="TBWA" desktopState={desktopState} />
                 <ThemesApp name="Themes" desktopState={desktopState}/>

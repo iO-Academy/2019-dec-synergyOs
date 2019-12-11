@@ -6,6 +6,7 @@ import AboutIcon from '../../res/icons/question.svg'
 import GiphyIcon from '../../res/icons/video.svg'
 import ThemeIcon from '../../res/icons/settings.svg'
 import MusicIcon from '../../res/icons/music.svg'
+import TopCatIcon from '../../res/icons/cat.png'
 
 class AppList extends Component {
 
@@ -13,7 +14,8 @@ class AppList extends Component {
         About: AboutIcon,
         Giphy: GiphyIcon,
         Themes: ThemeIcon,
-        Music: MusicIcon
+        Music: MusicIcon,
+        TopCat: TopCatIcon,
     }
 
     badOpener = () => {
@@ -26,7 +28,7 @@ class AppList extends Component {
         const listItems = apps.map((appName) =>
             <div id={`${appName}app`}className='AppContainer'>
                 <img className='AppIcon' src={this.appIcons[appName]} alt='icon' />
-                <li onClick={() => this.props.appData.openApp(appName)} key={appName} className='AppListItem'>{appName}</li>
+                <li onClick={() => {this.props.appData.openApp(appName); this.props.appData.activateApp(appName)}} key={appName} className='AppListItem'>{appName}</li>
             </div>
         )
 

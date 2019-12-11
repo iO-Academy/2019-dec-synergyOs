@@ -47,7 +47,7 @@
 }
 
 .app-statusBar {
-    height: 10px;
+    height: 20px;
     width: 100%;
     background-color: #999;
     position: absolute;
@@ -56,8 +56,8 @@
 }
 
 .app-statusBar div {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     background-color: #555555;
     float: right;
 }
