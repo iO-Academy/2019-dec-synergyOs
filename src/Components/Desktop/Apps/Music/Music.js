@@ -28,8 +28,6 @@ class Music extends React.Component {
             }
         }
 
-
-        
         if (prevProps !== this.props) {
             this.setState({
                 name: this.state.name,
