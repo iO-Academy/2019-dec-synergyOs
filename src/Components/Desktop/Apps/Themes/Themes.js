@@ -87,7 +87,7 @@ class ThemesApp extends React.Component {
                     <p>Select your preferred theme below</p><br /><br />
 
                     <div>
-                        <button className='themeBtn' onClick={this.selectTheme1}>Default</button><br /><br /><br />
+                        <button className='themeBtn' onClick={this.selectTheme1}>Default</button>
                         <button className='themeBtn' onClick={this.selectTheme2}>Dark</button><br /><br /><br />
                         <button className='themeBtn' onClick={this.selectTheme3}>Gradient</button><br /><br />
                     </div>
