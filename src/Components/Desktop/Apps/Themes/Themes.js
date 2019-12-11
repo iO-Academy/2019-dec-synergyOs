@@ -77,6 +77,7 @@ class ThemesApp extends React.Component {
                         <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink')}}>Default</button>
                         <button className='themeBtn' onClick={() => {this.setTheme('dark', 'blue')}}>Dark</button>
                         <button className='themeBtn' onClick={() => {this.setTheme('gradient', 'red')}}>Gradient</button>
+                        <button className='themeBtn' onClick={() => {this.setTheme('bad', 'bisque')}}>Bad</button>
                     </div>
 
 

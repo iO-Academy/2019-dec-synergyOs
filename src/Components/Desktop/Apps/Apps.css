@@ -1,3 +1,7 @@
+.bad * {
+    font-family: 'Comic Sans MS';
+}
+
 .app {
     background-color: #ffffff;
     position: absolute;
