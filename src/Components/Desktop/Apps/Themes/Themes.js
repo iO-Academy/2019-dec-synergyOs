@@ -45,22 +45,9 @@ class ThemesApp extends React.Component {
         app.style.zIndex = zIndex
     }
 
-    selectTheme1 = () => {
-        this.props.desktopState.setTheme('default')
-        this.props.desktopState.setColor('pink')
-
-    }
-
-    selectTheme2 = () => {
-        this.props.desktopState.setTheme('dark')
-        this.props.desktopState.setColor('blue')
-
-    }
-
-    selectTheme3 = () => {
-        this.props.desktopState.setTheme('other')
-        this.props.desktopState.setColor('red')
-
+    setTheme = (theme, color) => {
+        this.props.desktopState.setTheme(theme)
+        this.props.desktopState.setColor(color)
     }
 
     render() {
@@ -87,11 +74,9 @@ class ThemesApp extends React.Component {
                     <p>Select your preferred theme below</p><br/><br/>
 
                     <div>
-                        <button className='themeBtn' onClick={this.selectTheme1}>Default</button>
-                        <button className='themeBtn' onClick={this.selectTheme2}>Dark</button>
-                        <br/><br/><br/>
-                        <button className='themeBtn' onClick={this.selectTheme3}>Gradient</button>
-                        <br/><br/>
+                        <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink')}}>Default</button>
+                        <button className='themeBtn' onClick={() => {this.setTheme('dark', 'blue')}}>Dark</button>
+                        <button className='themeBtn' onClick={() => {this.setTheme('gradient', 'red')}}>Gradient</button>
                     </div>
 
 
