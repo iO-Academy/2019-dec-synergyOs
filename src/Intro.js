@@ -12,9 +12,12 @@ class Intro extends Component{
 
     render() {
         return(
-            <div className="video">
-                <video onClick={endVid} onEnded={() => endVid()} width='640px' height="100%" src={vid}type="video/mp4"></video>
+            <div>
                 <button id="start" onClick={(e) => {e.target.remove(); document.querySelector('video').play()}}>START SYNERGY OS</button>
+                <div className="video">
+                    <video onClick={endVid} onEnded={() => endVid()} width='640px' height="100%" src={vid}type="video/mp4"></video>
+                
+                </div>
             </div>
             
         )
