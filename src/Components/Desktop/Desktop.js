@@ -12,6 +12,8 @@ import TopCat from './Apps/TopCat/TopCat'
 import Calculator from './Apps/Calculator/Calcualtor'
 import Cows from "./Apps/Cows/Cows";
 import Codepen from "./Apps/Codepen/Codepen"
+import SuperSpreadSheet from './Apps/Office/SuperSpreadSheet/SuperSpreadSheet'
+import SuperWriter from './Apps/Office/SuperWriter/SuperWriter'
 
 class Desktop extends Component {
     constructor(props) {
@@ -59,6 +61,8 @@ class Desktop extends Component {
                 <Cows name='Cows' desktopState={desktopState}/>
                 <Codepen name='Codepen' desktopState={desktopState}/>
                 <Calculator name="Calculator" desktopState={desktopState}/>
+                <SuperWriter name="SuperWriter" desktopState={desktopState} />
+                <SuperSpreadSheet name="SuperSpreadSheet" desktopState={desktopState} />
                 <Nyan name="TBWA" desktopState={desktopState}/>
                 <Revelations name="TBWA" desktopState={desktopState}/>
                 <ThemesApp name="Themes" desktopState={desktopState}/>
