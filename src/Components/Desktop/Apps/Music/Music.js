@@ -65,7 +65,7 @@ class Music extends React.Component {
                     <p>{this.state.name}</p>
                 </div>
                 <div className="app-content" style={appMinWidths}>
-                <iframe width="100%" height="600" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/942416575&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>                </div>
+                    <iframe title="Synergy FM" width="100%" height="600" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/942416575&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>                </div>
                 <div className="app-statusBar">
                     <div onPointerDown={e => {
                         resizeApp(e.target.parentElement, this.activateApp)
