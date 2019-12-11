@@ -18,3 +18,7 @@ Displays a random gif from Giphy, click the image or the button in the title bar
 
 Plays music from the **official** SynergyOS radio station playlist on Soundcloud
 
+### TopCat app
+
+Displays a selection of images for a specified cat breed, app made by the Mayden Academy July 2019 Cohort
+
