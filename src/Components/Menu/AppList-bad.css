@@ -1,7 +1,7 @@
 .bad .AppList {
     border: 2px solid #ff00f2;
     background-color: #00e1ff;
-    transform: scale(3);
+    transform: scale(1.5);
     right: 10%;
     bottom: 40%;
 }
