@@ -22,3 +22,6 @@ Plays music from the **official** SynergyOS radio station playlist on Soundcloud
 
 Displays a selection of images for a specified cat breed, app made by the Mayden Academy July 2019 Cohort
 
+### Cows game
+
+A game where you must protect the falling cows, abducted by aliens, from parachuting into the fire. Game made by Mayden 2017 Cohort
