@@ -71,7 +71,7 @@ class ThemesApp extends React.Component {
                 </div>
                 <div className="app-content themesContainer" style={appMinWidths}>
                     <h1>Themes</h1>
-                    <p>Select your preferred theme below</p><br/><br/>
+                    <p>Select your preferred theme below</p>
 
                     <div>
                         <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink')}}>Default</button>
