@@ -7,7 +7,7 @@ import Fullscreen from "./Menu/Fullscreen"
 
 function MenuBar() {
     return (
-        <div className="MenuBar">
+        <div className="MenuBar closed">
             <Fullscreen/>
             <div className='menuClock'><Clock/></div>
             <div className='menuAppBtn'><AppBtn/></div>

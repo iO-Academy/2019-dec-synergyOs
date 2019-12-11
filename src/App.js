@@ -3,6 +3,7 @@ import './App.css'
 import MenuBar from './Components/MenuBar'
 import Desktop from './Components/Desktop/Desktop'
 import logo from './res/synergyoslogo.png'
+import Intro from './Intro'
 
 class App extends Component {
   constructor(props) {
@@ -79,6 +80,7 @@ class App extends Component {
     document.getElementById('root').classList.add(appState.currentTheme) 
     return (
       <div>
+        <Intro></Intro>
         <Desktop backgroundImg={this.state.backgroundImg} appState={appState} />
         <MenuBar currentApps={this.state.apps} openApp={this.setAppOpen} />
       </div>
