@@ -9,8 +9,8 @@
 }
 
 .themeBtn {
-    background-color: #18AAA3;
-    color: #fff;
+    background-color: pink;
+    color: #000;
     padding: 3px 10px;
     border: none;
     border-radius: 3px;
@@ -24,12 +24,23 @@
     display: none
 }
 
+#darkBtn {
+    background: #4f4f75;
+    color: #fff;
+}
+
+#matrixBtn {
+    background: #00FF41;
+    color: #000;
+}
+
 #tbwa {
     background: red; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
+    color: ;
 }
 
 #more {

@@ -9,6 +9,7 @@ import MusicIcon from '../../res/icons/music.svg'
 import TopCatIcon from '../../res/icons/cat.png'
 import CalculatorIcon from '../../res/icons/calculator.png'
 import ParachuteIcon from '../../res/icons/parachute.png'
+import CodepenIcon from '../../res/icons/codepen.png'
 
 class AppList extends Component {
 
@@ -19,11 +20,8 @@ class AppList extends Component {
         Music: MusicIcon,
         TopCat: TopCatIcon,
         Calculator: CalculatorIcon,
-        Cows: ParachuteIcon
-    }
-
-    badOpener = () => {
-        
+        Cows: ParachuteIcon,
+        Codepen: CodepenIcon
     }
 
     render() {

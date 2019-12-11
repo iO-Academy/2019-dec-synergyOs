@@ -11,12 +11,14 @@ import Revelations from './Apps/Revelations/Revelations'
 import TopCat from './Apps/TopCat/TopCat'
 import Calculator from './Apps/Calculator/Calcualtor'
 import Cows from "./Apps/Cows/Cows";
+import Codepen from "./Apps/Codepen/Codepen"
 
 class Desktop extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            height: window.innerHeight - 50
+            height: window.innerHeight - 50,
+            backgroundSize: '50%'
         }
     }
 
@@ -49,7 +51,7 @@ class Desktop extends Component {
             backgroundRepeat: `no-repeat`,
             backgroundAttachment: `fixed`,
             backgroundPosition: `center`,
-            backgroundSize: '50%',
+            backgroundSize: this.props.appState.backgroundSize,
             overflow: 'hidden'
         }
         return (
@@ -59,6 +61,7 @@ class Desktop extends Component {
                 <Music name="Music" desktopState={desktopState}/>
                 <TopCat name='TopCat' desktopState={desktopState}/>
                 <Cows name='Cows' desktopState={desktopState}/>
+                <Codepen name='Codepen' desktopState={desktopState}/>
                 <Calculator name="Calculator" desktopState={desktopState}/>
                 <Nyan name="TBWA" desktopState={desktopState}/>
                 <Revelations name="TBWA" desktopState={desktopState}/>

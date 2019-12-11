@@ -1,17 +1,12 @@
 import React from "react";
-import './Themes.css'
-import '../AppsDark.css'
-import '../AppsMatrix.css'
+import '../Apps.css'
 import '../Apps-bad.css'
 import dragApp from '../AppDragger'
 import resizeApp from '../AppResizer'
-import logo from '../../../../res/synergyoslogo.png'
-import logoDark from '../../../../res/synergyoslogoDark.png'
-import matrix from '../../../../res/matrix.jpg'
 
-import sean from '../../../../res/tbwa.png'
+import './Codepen.css'
 
-class ThemesApp extends React.Component {
+class Codepen extends React.Component {
     constructor(props) {
         super(props)
         let appName = this.props.name
@@ -27,10 +22,15 @@ class ThemesApp extends React.Component {
         }
 
         this.props.desktopState.closeApp(appName)
-
     }
 
     componentDidUpdate(prevProps) {
+        if (this.state.visibility !== this.props.desktopState.currentApps[this.state.name]) {
+            if (this.props.desktopState.currentApps[this.state.name] === 'open') {
+                this.addIframe()
+            }
+        }
+
         if (prevProps !== this.props) {
             this.setState({
                 name: this.state.name,
@@ -53,22 +53,21 @@ class ThemesApp extends React.Component {
         app.style.zIndex = zIndex
     }
 
-    setTheme = (theme, color, background) => {
-        this.props.desktopState.setTheme(theme)
-        this.props.desktopState.setColor(color)
-        this.props.desktopState.setBackgroundImg(background)
+    removeIframe = () => {
+        let thisApp = document.getElementById(this.state.name)
+        thisApp.querySelector('iframe').remove()
     }
 
-    setThemeBackgroundSize = (backgroundSize) => {
-        this.props.desktopState.setBackgroundSize(backgroundSize)
+    addIframe = () => {
+        let thisApp = document.getElementById(this.state.name)
+        thisApp.querySelector('.app-content').innerHTML = `<iframe src='https://codepen.io/pen/'></iframe>`
     }
 
     render() {
 
-        let appMinWidths = {minWidth: '100px', minHeight: '100px'}
+        let appMinWidths = {minWidth: '1100px', minHeight: '500px', maxHeight: '900px'}
 
         return (
-
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
                  style={this.style}>
                 <div className="topBar" onPointerDown={e => {
@@ -76,25 +75,15 @@ class ThemesApp extends React.Component {
                 }}>
                     <button onClick={() => {
                         this.props.desktopState.closeApp(this.state.name);
+                        this.removeIframe()
                         console.log(this.state.name)
                     }}>X
                     </button>
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
-                <div className="app-content themesContainer" style={appMinWidths}>
-                    <h1>Themes</h1>
-                    <p>Select your preferred theme below</p>
-
-                    <div>
-                        <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink', logo)}}>Default</button>
-                        <button id="darkBtn" className='themeBtn' onClick={() => {this.setTheme('dark', '#323844', logoDark)}}>Dark</button>
-                        <button id="matrixBtn" className='themeBtn' onClick={() => {this.setTheme('matrix', '#00FF41', matrix); this.setThemeBackgroundSize('100%')}}>Matrix</button>
-                        {/* <button className='themeBtn' onClick={() => {this.setTheme('gradient', 'red')}}>Gradient</button>*/}
-                        <button id="more" className='themeBtn' onClick={(e) =>{e.target.classList.add('closed'); document.getElementById('tbwa').classList.remove('closed')} }>More...</button>
-                        <button id="tbwa" className='themeBtn closed' onClick={() => {this.setTheme('bad', 'bisque', sean);}}>TBWA</button>
-                    </div>
-
+                <div className="app-content" style={appMinWidths}>
+                    <iframe src='https://codepen.io/pen/'></iframe>
                 </div>
                 <div className="app-statusBar">
                     <div onPointerDown={e => {
@@ -106,4 +95,4 @@ class ThemesApp extends React.Component {
     }
 }
 
-export default ThemesApp
+export default Codepen

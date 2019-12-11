@@ -15,7 +15,8 @@ class App extends Component {
       currentZ: '1',
       theme: 'default',
       color: 'pink',
-      backgroundImg: logo
+      backgroundImg: logo,
+      backgroundSize: '100%'
     }
   }
 
@@ -57,6 +58,12 @@ class App extends Component {
     this.setState(currentState)
   }
 
+  setBackgroundSize = (int) => {
+    let currentState = this.state
+    currentState.backgroundSize = int
+    this.setState(currentState)
+  }
+
   render() {
 
     let appState = {
@@ -72,7 +79,8 @@ class App extends Component {
       currentTheme: this.state.theme,
       backgroundColor: this.state.color,
       setColor: this.setColor,
-      setBackgroundImg: this.setBackgroundImg
+      setBackgroundImg: this.setBackgroundImg,
+      setBackgroundSize: this.setBackgroundSize
 
     }
 
