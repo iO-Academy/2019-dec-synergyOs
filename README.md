@@ -54,9 +54,14 @@ Made at [Mayden Academy](https://mayden.academy/) with help from [Charlie Cogg](
 Project boostrapped with [create-react-app](https://github.com/facebook/create-react-app)
 
 Credits to:
+
 [Giphy](http://giphy.com) for their API
+
 [SoundCloud](http://soundcloud.com) for the tunage
+
 [icons8](http://icons8.com) for icons
+
 [Windows93](http://windows93.net) for the Calculator
+
 Past Mayden students for the Cows game and TopCat
 
