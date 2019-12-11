@@ -5,12 +5,10 @@ import fullscreenOpen from '../../res/fullscreenOpen.svg'
 
 
 const toggleFullscreen = () => {
-    if(!window.mobilecheck) {
-        if (screenfull.isFullscreen) {
-            screenfull.exit()
-        } else {
-            screenfull.request()
-        }
+    if (screenfull.isFullscreen) {
+        screenfull.exit()
+    } else {
+        screenfull.request()
     }
 }
 
@@ -20,14 +18,14 @@ const Fullscreen = () => {
     )
 }
 
-if(!window.mobilecheck) {
-    screenfull.on('change', () => {
-        if (!screenfull.isFullscreen) {
-            document.getElementById('fullscreenButton').src = fullscreenOpen
-        } else {
-            document.getElementById('fullscreenButton').src = fullscreenClose
-        }
-    })
-}
+
+screenfull.on('change', () => {
+    if (!screenfull.isFullscreen) {
+        document.getElementById('fullscreenButton').src = fullscreenOpen
+    } else {
+        document.getElementById('fullscreenButton').src = fullscreenClose
+    }
+})
+
 
 export default Fullscreen
