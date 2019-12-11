@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import './App.css'
-import ReactDOM from 'react-dom'
 import MenuBar from './Components/MenuBar'
 import Desktop from './Components/Desktop/Desktop'
 import logo from './res/synergyoslogo.png'
@@ -84,7 +83,5 @@ class App extends Component {
     );
   }
 }
-
-ReactDOM.render(<App />, document.getElementById('root'))
 
 export default App
