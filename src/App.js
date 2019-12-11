@@ -74,6 +74,7 @@ class App extends Component {
       setBackgroundImg: this.setBackgroundImg
 
     }
+
     document.getElementById('root').classList = ''
     document.getElementById('root').classList.add(appState.currentTheme) 
     return (

@@ -20,6 +20,14 @@
     margin: 3px;
 }
 
+.app .topBar:hover {
+    cursor: grab;
+}
+
+.app .topBar:active {
+    cursor: grabbing;
+}
+
 .app .topBar button {
     background-color: #FF0000;
     border: 2px solid #000000;

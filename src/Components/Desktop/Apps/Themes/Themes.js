@@ -6,6 +6,8 @@ import resizeApp from '../AppResizer'
 import logo from '../../../../res/synergyoslogo.png'
 import logoDark from '../../../../res/synergyoslogoDark.png'
 
+import sean from '../../../../res/tbwa.png'
+
 class ThemesApp extends React.Component {
     constructor(props) {
         super(props)
@@ -81,7 +83,7 @@ class ThemesApp extends React.Component {
                         <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink', logo)}}>Default</button>
                         <button className='themeBtn' onClick={() => {this.setTheme('dark', '#323844', logoDark)}}>Dark</button>
                         <button className='themeBtn' onClick={() => {this.setTheme('gradient', 'red')}}>Gradient</button>
-                        <button className='themeBtn' onClick={() => {this.setTheme('bad', 'bisque')}}>Bad</button>
+                        <button className='themeBtn' onClick={() => {this.setTheme('bad', 'bisque', sean)}}>TBWA</button>
                     </div>
 
 

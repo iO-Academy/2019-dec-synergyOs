@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './AppList.css'
+import './AppList-bad.css'
 
 import AboutIcon from '../../res/icons/question.svg'
 import GiphyIcon from '../../res/icons/video.svg'
@@ -13,6 +14,10 @@ class AppList extends Component {
         Giphy: GiphyIcon,
         Themes: ThemeIcon,
         Music: MusicIcon
+    }
+
+    badOpener = () => {
+        
     }
 
     render() {
