@@ -4,7 +4,7 @@ import '../Apps-bad.css'
 import dragApp from '../AppDragger'
 import resizeApp from '../AppResizer'
 
-import './Codepen.css'
+import './Bagel.css'
 
 class Codepen extends React.Component {
     constructor(props) {
@@ -60,12 +60,12 @@ class Codepen extends React.Component {
 
     addIframe = () => {
         let thisApp = document.getElementById(this.state.name)
-        thisApp.querySelector('.app-content').innerHTML = `<iframe src='https://codepen.io/pen/'></iframe>`
+        thisApp.querySelector('.app-content').innerHTML = `<iframe title='video' width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" autoplay></iframe>`
     }
 
     render() {
 
-        let appMinWidths = {minWidth: '1100px', minHeight: '500px', maxHeight: '900px'}
+        let appMinWidths = {minWidth: '500px', minHeight: '500px', }
 
         return (
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
@@ -83,7 +83,8 @@ class Codepen extends React.Component {
                     <p>{this.state.name}</p>
                 </div>
                 <div className="app-content" style={appMinWidths}>
-                    <iframe title='codepen' src='https://codepen.io/pen/'></iframe>
+                    {/* <iframe title='calc' src='https://codepen.io/pen/'></iframe> */}
+                    <iframe title='video' width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" autopPlay='true'></iframe>
                 </div>
                 <div className="app-statusBar">
                     <div onPointerDown={e => {

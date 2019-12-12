@@ -12,6 +12,7 @@ import TopCat from './Apps/TopCat/TopCat'
 import Calculator from './Apps/Calculator/Calcualtor'
 import Cows from "./Apps/Cows/Cows";
 import Codepen from "./Apps/Codepen/Codepen"
+import Bagel from "./Apps/Bagel/Bagel"
 import SuperSpreadSheet from './Apps/Office/SuperSpreadSheet/SuperSpreadSheet'
 import SuperWriter from './Apps/Office/SuperWriter/SuperWriter'
 import SuperPresenter from './Apps/Office/SuperPresenter/SuperPresenter'
@@ -62,6 +63,7 @@ class Desktop extends Component {
                 <TopCat name='TopCat' desktopState={desktopState}/>
                 <Cows name='Cows' desktopState={desktopState}/>
                 <Codepen name='Codepen' desktopState={desktopState}/>
+                <Bagel name='Bagel' desktopState={desktopState}/>
                 <Calculator name="Calculator" desktopState={desktopState}/>
                 <SuperWriter name="SuperWriter" desktopState={desktopState} />
                 <SuperSpreadSheet name="SuperSpreadSheet" desktopState={desktopState} />
