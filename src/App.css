@@ -53,3 +53,7 @@ body {
     margin-left: -50px;
     top: 50%;
 }
+
+video {
+    display: none;
+}
