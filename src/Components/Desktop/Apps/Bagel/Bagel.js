@@ -1,12 +1,10 @@
 import React from "react";
 import '../Apps.css'
-import '../Apps-bad.css'
 import dragApp from '../AppDragger'
 import resizeApp from '../AppResizer'
+import video from '../../../../res/bagel.mp4'
 
-import './Bagel.css'
-
-class Codepen extends React.Component {
+class Bagel extends React.Component {
     constructor(props) {
         super(props)
         let appName = this.props.name
@@ -22,15 +20,10 @@ class Codepen extends React.Component {
         }
 
         this.props.desktopState.closeApp(appName)
+
     }
 
     componentDidUpdate(prevProps) {
-        if (this.state.visibility !== this.props.desktopState.currentApps[this.state.name]) {
-            if (this.props.desktopState.currentApps[this.state.name] === 'open') {
-                this.addIframe()
-            }
-        }
-
         if (prevProps !== this.props) {
             this.setState({
                 name: this.state.name,
@@ -53,39 +46,27 @@ class Codepen extends React.Component {
         app.style.zIndex = zIndex
     }
 
-    removeIframe = () => {
-        let thisApp = document.getElementById(this.state.name)
-        thisApp.querySelector('iframe').remove()
-    }
-
-    addIframe = () => {
-        let thisApp = document.getElementById(this.state.name)
-        thisApp.querySelector('.app-content').innerHTML = `<iframe title='video' width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" autoplay></iframe>`
-    }
-
     render() {
 
-        let appMinWidths = {minWidth: '500px', minHeight: '500px', }
+        let appMinWidths = { minWidth: '100px', minHeight: '100px' }
+
 
         return (
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
-                 style={this.style}>
+                style={this.style}>
                 <div className="topBar" onPointerDown={e => {
                     dragApp(e.target, this.activateApp)
                 }}>
                     <button onClick={() => {
                         this.props.desktopState.closeApp(this.state.name);
-                        this.removeIframe()
+                        document.querySelector('#bagelVideo').pause()
                         console.log(this.state.name)
                     }}>X
                     </button>
                     <div className="divider"></div>
                     <p>{this.state.name}</p>
                 </div>
-                <div className="app-content" style={appMinWidths}>
-                    {/* <iframe title='calc' src='https://codepen.io/pen/'></iframe> */}
-                    <iframe title='video' width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" autopPlay='true'></iframe>
-                </div>
+                <video className="app-content bagelContent"id='bagelVideo' width='auto' height="auto" src={video} type="video/mp4"></video> 
                 <div className="app-statusBar">
                     <div onPointerDown={e => {
                         resizeApp(e.target.parentElement, this.activateApp)
@@ -96,4 +77,4 @@ class Codepen extends React.Component {
     }
 }
 
-export default Codepen
+export default Bagel

@@ -42,6 +42,9 @@ class AppList extends Component {
                 <li key onClick={() => {
                     this.props.appData.openApp(appName);
                     this.props.appData.activateApp(appName)
+                    if(appName == 'Bagel') {
+                        document.querySelector('#bagelVideo').play()
+                    }
                 }} className='AppListItem'>{appName}</li>
             </div>
         )
