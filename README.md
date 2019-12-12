@@ -39,6 +39,18 @@ A calcualtor app, from [Windows 93](http://windows93.net)
 Allows you to change the OS theme
 Easter egg included (hint: devtools)
 
+### Office suite
+
+Google docs iFrames
+
+### Bagel
+
+A suprise
+
+### NES Emualtor
+
+A NES emulator using JSNES
+
 ---
 
 **SynergyOS was made by:**
