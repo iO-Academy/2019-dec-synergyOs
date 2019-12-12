@@ -48,9 +48,6 @@ class Bagel extends React.Component {
 
     render() {
 
-        let appMinWidths = { minWidth: '100px', minHeight: '100px' }
-
-
         return (
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
                 style={this.style}>
