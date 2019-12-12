@@ -42,3 +42,14 @@ body {
 .matrix @font-face {
     src: url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 }
+
+#start{
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+}
