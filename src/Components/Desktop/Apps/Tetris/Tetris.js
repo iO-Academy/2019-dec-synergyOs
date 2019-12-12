@@ -3,11 +3,7 @@ import './AboutApp.css'
 import dragApp from '../AppDragger'
 import resizeApp from '../AppResizer'
 
-import alex from '../../../../res/headshots/alex.png'
-import anton from '../../../../res/headshots/anton.png'
-import josh from '../../../../res/headshots/josh.png'
-
-class AboutApp extends React.Component {
+class Tetris extends React.Component {
     constructor(props) {
         super(props)
         let appName = this.props.name
@@ -108,4 +104,4 @@ class AboutApp extends React.Component {
     }
 }
 
-export default AboutApp
+export default TestApp
