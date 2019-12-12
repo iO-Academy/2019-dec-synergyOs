@@ -41,6 +41,10 @@ cursor: url(http://cur.cursors-4u.net/cursors/cur-6/cur588.cur), auto !important
     color: #00FF41;
 }
 
+.matrix #About a {
+    color: #00FF41;
+}
+
 .matrix .active {
     box-shadow: 5px 5px #00FF41;
 }

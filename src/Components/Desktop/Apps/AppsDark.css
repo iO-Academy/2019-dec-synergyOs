@@ -35,6 +35,10 @@ cursor: url(http://cur.cursors-4u.net/cursors/cur-6/cur588.cur), auto !important
     color: #93a0ff;
 }
 
+.dark #About a {
+    color: #93a0ff;
+}
+
 .dark .active {
     box-shadow: 5px 5px #959595;
 }

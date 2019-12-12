@@ -3,6 +3,10 @@
     height: 450px;
 }
 
+#About a {
+    color: #0E0C75;
+}
+
 .aboutAppContainer {
     text-align: center;
     margin: 20px;
