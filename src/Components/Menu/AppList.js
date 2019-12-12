@@ -10,6 +10,10 @@ import TopCatIcon from '../../res/icons/cat.png'
 import CalculatorIcon from '../../res/icons/calculator.png'
 import ParachuteIcon from '../../res/icons/parachute.png'
 import CodepenIcon from '../../res/icons/codepen.png'
+import SuperWriterIcon from '../../res/icons/document.svg'
+import SuperPresenterIcon from '../../res/icons/slides.svg'
+import SuperDrawIcon from '../../res/icons/draw.svg'
+import SuperSpreadSheetIcon from '../../res/icons/sheet.svg'
 
 class AppList extends Component {
 
@@ -22,6 +26,11 @@ class AppList extends Component {
         Calculator: CalculatorIcon,
         Cows: ParachuteIcon,
         Codepen: CodepenIcon,
+        SuperWriter: SuperWriterIcon,
+        SuperSpreadSheet: SuperSpreadSheetIcon,
+        SuperPresenter: SuperPresenterIcon,
+        SuperDraw: SuperDrawIcon
+
     }
 
     render() {
