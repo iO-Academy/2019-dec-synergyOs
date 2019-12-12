@@ -26,6 +26,11 @@ body {
     src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
 }
 
+@font-face {
+    font-family: 'matrix';
+    src: url(./fonts/PressStart2P-Regular.ttf);
+}
+
 #root {
     overflow-x: hidden;
     overflow-y: hidden;
@@ -37,10 +42,6 @@ body {
 
 .bad * {
     font-family: 'Comic Sans MS', 'Zapfino';
-}
-
-.matrix @font-face {
-    src: url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 }
 
 #start{
