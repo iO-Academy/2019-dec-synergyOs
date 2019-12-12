@@ -45,11 +45,6 @@ class ListPage extends Component {
                 ))}
             </ListGroup>
 
-            <p>
-              Or, drag and drop a ROM file onto the page to play it. (Google may
-              help you find them.)
-            </p>
-
             {this.state.romLibrary.length > 0 ? (
               <div>
                 <p>Previously played:</p>

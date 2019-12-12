@@ -79,14 +79,6 @@ class RunPage extends Component {
               <Button
                 outline
                 color="primary"
-                onClick={this.toggleControlsModal}
-                className="mr-3"
-              >
-                Controls
-              </Button>
-              <Button
-                outline
-                color="primary"
                 onClick={this.handlePauseResume}
                 disabled={!this.state.running}
               >
@@ -109,7 +101,7 @@ class RunPage extends Component {
               <Progress
                 value={this.state.loadedPercent}
                 style={{
-                  position: "absolute",
+                  position: "relative",
                   width: "70%",
                   left: "15%",
                   top: "48%"
@@ -126,19 +118,6 @@ class RunPage extends Component {
             ) : null}
 
             {/* TODO: lift keyboard and gamepad state up */}
-            {this.state.controlsModalOpen && (
-              <ControlsModal
-                isOpen={this.state.controlsModalOpen}
-                toggle={this.toggleControlsModal}
-                keys={this.emulator.keyboardController.keys}
-                setKeys={this.emulator.keyboardController.setKeys}
-                promptButton={this.emulator.gamepadController.promptButton}
-                gamepadConfig={this.emulator.gamepadController.gamepadConfig}
-                setGamepadConfig={
-                  this.emulator.gamepadController.setGamepadConfig
-                }
-              />
-            )}
           </div>
         )}
       </div>

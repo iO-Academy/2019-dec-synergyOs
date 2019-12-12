@@ -56,8 +56,14 @@ class NES extends React.Component {
 
   render() {
 
-      let appMinWidths = {minWidth: '800px', minHeight: '700px', maxHeight: '650px'}
+      let appMinWidths = {minWidth: '800px', minHeight: '750px'}
 
+      let game = <div className="nesGame">
+                <Route exact path="/run" component={RunPage} />
+                <Route exact path="/run/:slug" component={RunPage} />
+                <Route path="/" render={this.recordPageview} />
+                 </div>
+                
       return (
           <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
                style={this.style}>
@@ -66,6 +72,7 @@ class NES extends React.Component {
               }}>
                   <button onClick={() => {
                       this.props.desktopState.closeApp(this.state.name);
+                        document.querySelector('.appNes').remove()
                   }}>X
                   </button>
                   <div className="divider"></div>
@@ -73,12 +80,11 @@ class NES extends React.Component {
               </div>
               <div className="app-content" style={appMinWidths}>
               <BrowserRouter>
-        <div className="App">
-          <Route exact path="/" component={ListPage} />
-          <Route exact path="/run" component={RunPage} />
-          <Route exact path="/run/:slug" component={RunPage} />
-          <Route path="/" render={this.recordPageview} />
-        </div>
+              <div className="appNes">
+                <Route exact path="/" component={ListPage} />
+
+                {game}
+            </div>
       </BrowserRouter>
               </div>
               <div className="app-statusBar">

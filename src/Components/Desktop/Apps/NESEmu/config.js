@@ -1,4 +1,5 @@
 import React from "react";
+import SM from './sm.nes'
 
 const config = {
   ROMS: {
@@ -20,49 +21,17 @@ const config = {
       ),
       url: "https://cdn.jsdelivr.net/gh/bfirsh/jsnes-roms@master/owlia.nes"
     },
-    nomolos: {
-      name: "Nomolos: Storming the Catsle",
+
+    superMario: {
+      name: "Super Mario Bros.",
       description: (
         <span>
-          <a
-            href="http://www.gradualgames.com/p/nomolos-storming-catsle.html"
-            target="_blank"
-          >
-            Monolos by Gradual Games
-          </a>{" "}
-          /{" "}
-          <a href="http://www.infiniteneslives.com/nomolos.php" target="_blank">
-            Buy the cartridge
-          </a>
+          Super Mario Bros.
+          Does this even need a description?
         </span>
       ),
-      url: "https://cdn.jsdelivr.net/gh/bfirsh/jsnes-roms@master/nomolos.nes"
+      url: SM
     },
-    croom: {
-      name: "Concentration Room",
-      description: (
-        <span>
-          <a href="http://www.pineight.com/croom/README" target="_blank">
-            Concentration Room
-          </a>{" "}
-          by Damian Yerrick
-        </span>
-      ),
-      url:
-        "https://cdn.jsdelivr.net/gh/bfirsh/jsnes-roms@master/croom/croom.nes"
-    },
-    lj65: {
-      name: "LJ65",
-      description: (
-        <span>
-          <a href="http://harddrop.com/wiki/LJ65" target="_blank">
-            Concentration Room
-          </a>{" "}
-          by Damian Yerrick
-        </span>
-      ),
-      url: "https://cdn.jsdelivr.net/gh/bfirsh/jsnes-roms@master/lj65/lj65.nes"
-    }
   },
   GOOGLE_ANALYTICS_CODE: process.env.REACT_APP_GOOGLE_ANALYTICS_CODE,
   SENTRY_URI: process.env.REACT_APP_SENTRY_URI
