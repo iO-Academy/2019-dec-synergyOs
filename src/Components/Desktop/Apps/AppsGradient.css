@@ -1,0 +1,12 @@
+.gradient .app {
+     background-image: linear-gradient(#D7DDE8, #757F9A);
+}
+
+.gradient .app .topBar {
+    background: linear-gradient(to right, #000000, #434343);
+    color: white;
+}
+
+.gradient .app .topBar button {
+    background-color: rgb(255, 66, 59);
+}

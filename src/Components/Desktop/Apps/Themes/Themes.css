@@ -35,6 +35,11 @@
     color: #000;
 }
 
+#gradientBtn {
+    background: linear-gradient(to right, rgb(51, 51, 255), rgb(107, 199, 230)); 
+    color: white;
+}
+
 #tbwa {
     background: red; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
