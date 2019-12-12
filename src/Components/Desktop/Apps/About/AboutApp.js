@@ -51,7 +51,7 @@ class AboutApp extends React.Component {
 
     render() {
 
-        let appMinWidths = {minWidth: '100px', minHeight: '100px'}
+        let appMinWidths = {minWidth: '100px', minHeight: '500px'}
 
         return (
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
@@ -87,7 +87,7 @@ class AboutApp extends React.Component {
                             <a href='https://github.com/jdselby24' className='aboutName'>@jbselby24</a>
 
                         </div>
-                    </div>
+                    </div><br/>
                     <div className="credits">
                         <p>CREDITS:</p>
                         <p>Icons from <a href="https://icons8.com">Icons8</a></p>
