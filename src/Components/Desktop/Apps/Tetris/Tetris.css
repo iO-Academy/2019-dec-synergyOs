@@ -1,4 +1,5 @@
-#Tetris iframe {
-    width: 100%;
-    height: 100%;
+#Tetris .app-content {
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
 }
