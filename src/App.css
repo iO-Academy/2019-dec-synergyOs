@@ -58,12 +58,3 @@ body {
 #intro {
     display: none;
 }
-
-.bagelContent {
-    margin: 0;
-}
-
-#bagelVideo{
-    border: 2px solid red;
-    margin: 0;
-}
