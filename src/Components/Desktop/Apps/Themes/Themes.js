@@ -2,6 +2,7 @@ import React from "react";
 import './Themes.css'
 import '../AppsDark.css'
 import '../AppsMatrix.css'
+import '../AppsGradient.css'
 import '../Apps-bad.css'
 
 import dragApp from '../AppDragger'
@@ -9,6 +10,7 @@ import resizeApp from '../AppResizer'
 import logo from '../../../../res/synergyoslogo.png'
 import logoDark from '../../../../res/synergyoslogoDark.png'
 import matrix from '../../../../res/matrix.jpg'
+import gradient from '../../../../res/gradient.png'
 import sean from '../../../../res/tbwa.png'
 
 class ThemesApp extends React.Component {
@@ -86,7 +88,7 @@ class ThemesApp extends React.Component {
                         <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink', logo); this.setThemeBackgroundSize('50%')}}>Default</button>
                         <button id="darkBtn" className='themeBtn' onClick={() => {this.setTheme('dark', '#323844', logoDark); this.setThemeBackgroundSize('50%')}}>Dark</button>
                         <button id="matrixBtn" className='themeBtn' onClick={() => {this.setTheme('matrix', '#00FF41', matrix); this.setThemeBackgroundSize('100%')}}>Matrix</button>
-                        {/* <button className='themeBtn' onClick={() => {this.setTheme('gradient', 'red'); this.setThemeBackgroundSize('50%')}}>Gradient</button>*/}
+                        <button id="gradientBtn" className='themeBtn' onClick={() => {this.setTheme('gradient', 'red', gradient); this.setThemeBackgroundSize('111%')}}>Gradient</button>
                         <button id="more" className='themeBtn' onClick={(e) =>{e.target.classList.add('closed'); document.getElementById('tbwa').classList.remove('closed')} }>More...</button>
                         <button id="tbwa" className='themeBtn closed' onClick={() => {this.setTheme('bad', 'bisque', sean); this.setThemeBackgroundSize('50%')}}>TBWA</button>
                     </div>
