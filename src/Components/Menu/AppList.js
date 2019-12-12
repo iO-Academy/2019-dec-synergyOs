@@ -14,6 +14,7 @@ import SuperWriterIcon from '../../res/icons/document.svg'
 import SuperPresenterIcon from '../../res/icons/slides.svg'
 import SuperDrawIcon from '../../res/icons/draw.svg'
 import SuperSpreadSheetIcon from '../../res/icons/sheet.svg'
+import NesIcon from '../../res/icons/nes.svg'
 
 class AppList extends Component {
 
@@ -29,8 +30,8 @@ class AppList extends Component {
         SuperWriter: SuperWriterIcon,
         SuperSpreadSheet: SuperSpreadSheetIcon,
         SuperPresenter: SuperPresenterIcon,
-        SuperDraw: SuperDrawIcon
-
+        SuperDraw: SuperDrawIcon,
+        NES: NesIcon
     }
 
     render() {
