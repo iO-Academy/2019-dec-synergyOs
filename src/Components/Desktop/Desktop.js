@@ -17,6 +17,8 @@ import SuperSpreadSheet from './Apps/Office/SuperSpreadSheet/SuperSpreadSheet'
 import SuperWriter from './Apps/Office/SuperWriter/SuperWriter'
 import SuperPresenter from './Apps/Office/SuperPresenter/SuperPresenter'
 import SuperDraw from './Apps/Office/SuperDraw/SuperDraw'
+import NES from './Apps/NESEmu/App'
+import NESControls from './Apps/NESEmu/Controls/NESControls'
 
 class Desktop extends Component {
     constructor(props) {
@@ -64,11 +66,12 @@ class Desktop extends Component {
                 <Cows name='Cows' desktopState={desktopState}/>
                 <Codepen name='Codepen' desktopState={desktopState}/>
                 <Bagel name='Bagel' desktopState={desktopState}/>
+                <NES name='NES' desktopState={desktopState} />
                 <Calculator name="Calculator" desktopState={desktopState}/>
-                <SuperWriter name="SuperWriter" desktopState={desktopState}/>
-                <SuperSpreadSheet name="SuperSpreadSheet" desktopState={desktopState}/>
-                <SuperPresenter name="SuperPresenter" desktopState={desktopState}/>
-                <SuperDraw name="SuperDraw" desktopState={desktopState}/>
+                <SuperWriter name="SuperWriter" desktopState={desktopState} />
+                <SuperSpreadSheet name="SuperSpreadSheet" desktopState={desktopState} />
+                <SuperPresenter name="SuperPresenter" desktopState={desktopState} />
+                <SuperDraw name="SuperDraw" desktopState={desktopState} />
                 <Nyan name="TBWA" desktopState={desktopState}/>
                 <Revelations name="TBWA" desktopState={desktopState}/>
                 <ThemesApp name="Themes" desktopState={desktopState}/>

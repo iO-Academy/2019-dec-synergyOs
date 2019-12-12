@@ -15,6 +15,8 @@ import SuperPresenterIcon from '../../res/icons/slides.svg'
 import SuperDrawIcon from '../../res/icons/draw.svg'
 import SuperSpreadSheetIcon from '../../res/icons/sheet.svg'
 import BagelIcon from '../../res/icons/bagel.svg'
+import NesIcon from '../../res/icons/nes.svg'
+
 
 class AppList extends Component {
 
@@ -31,8 +33,8 @@ class AppList extends Component {
         SuperSpreadSheet: SuperSpreadSheetIcon,
         SuperPresenter: SuperPresenterIcon,
         SuperDraw: SuperDrawIcon,
-        Bagel: BagelIcon
-
+        Bagel: BagelIcon,
+        NES: NesIcon
     }
 
     render() {

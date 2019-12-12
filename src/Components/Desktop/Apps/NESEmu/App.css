@@ -1,0 +1,35 @@
+.App,
+.modal-dialog {
+  font-family: Menlo, monospace;
+}
+
+#NES .app-content {
+  background-color: black;
+  color: white;
+}
+
+.ListPage {
+  text-align: center;
+}
+
+.ListPage * {
+  margin: 5px;
+}
+
+.ListGroup {
+  display: block
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #fefefe;
+  text-decoration: none;
+}
+
+a:hover {
+  color: aqua;
+  text-decoration: underline;
+}
