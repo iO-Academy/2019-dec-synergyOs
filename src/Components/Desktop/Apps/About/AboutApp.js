@@ -49,7 +49,7 @@ class AboutApp extends React.Component {
         app.style.zIndex = zIndex
     }
 
-    render(){
+    render() {
 
         let appMinWidths = {minWidth: '100px', minHeight: '100px'}
 
@@ -85,7 +85,7 @@ class AboutApp extends React.Component {
                         <div className='aboutContactBox'>
                             <img src={josh} alt='headshot' className='aboutHeadshot'/>
                             <a href='https://github.com/jdselby24' className='aboutName'>@jbselby24</a>
-                            
+
                         </div>
                     </div>
                     <div className="credits">
@@ -95,8 +95,7 @@ class AboutApp extends React.Component {
                         <p>Made with <a href="http://reactjs.com">React</a></p>
                     </div>
                 </div>
-                
-                
+
 
                 <div className="app-statusBar">
                     <div onPointerDown={e => {
