@@ -68,7 +68,7 @@ class Revelations extends React.Component {
                     <p>{this.state.name}</p>
                 </div>
                 <div className="app-content" style={appMinWidths}>
-                <img border="0" src="http://www.TheOppositeIsTrue.net/Banners/REVELATIONS.gif" title="CONSTELLATION SEVEN REVELATION MINISTRIES FOR CHRIST JESUS THE SON OF GOD - AMEN"></img>
+                <img border="0" src="http://www.TheOppositeIsTrue.net/Banners/REVELATIONS.gif" title="CONSTELLATION SEVEN REVELATION MINISTRIES FOR CHRIST JESUS THE SON OF GOD - AMEN" alt='bible'></img>
                 </div>
                 <div className="app-statusBar">
                     <div onPointerDown={e => {

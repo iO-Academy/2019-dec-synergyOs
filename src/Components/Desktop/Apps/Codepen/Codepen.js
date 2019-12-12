@@ -83,7 +83,7 @@ class Codepen extends React.Component {
                     <p>{this.state.name}</p>
                 </div>
                 <div className="app-content" style={appMinWidths}>
-                    <iframe src='https://codepen.io/pen/'></iframe>
+                    <iframe title='calc' src='https://codepen.io/pen/'></iframe>
                 </div>
                 <div className="app-statusBar">
                     <div onPointerDown={e => {

@@ -42,7 +42,7 @@ class AppList extends Component {
                 <li key onClick={() => {
                     this.props.appData.openApp(appName);
                     this.props.appData.activateApp(appName)
-                }} key={appName} className='AppListItem'>{appName}</li>
+                }} className='AppListItem'>{appName}</li>
             </div>
         )
 
