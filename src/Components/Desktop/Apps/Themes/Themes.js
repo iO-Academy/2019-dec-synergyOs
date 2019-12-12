@@ -87,8 +87,8 @@ class ThemesApp extends React.Component {
                     <div>
                         <button className='themeBtn' onClick={() => {this.setTheme('default', 'pink', logo); this.setThemeBackgroundSize('50%')}}>Default</button>
                         <button id="darkBtn" className='themeBtn' onClick={() => {this.setTheme('dark', '#323844', logoDark); this.setThemeBackgroundSize('50%')}}>Dark</button>
-                        <button id="matrixBtn" className='themeBtn' onClick={() => {this.setTheme('matrix', '#00FF41', matrix); this.setThemeBackgroundSize('115%')}}>Matrix</button>
-                        <button id="gradientBtn" className='themeBtn' onClick={() => {this.setTheme('gradient', 'red', gradient); this.setThemeBackgroundSize('111%')}}>Gradient</button>
+                        <button id="matrixBtn" className='themeBtn' onClick={() => {this.setTheme('matrix', '#00FF41', matrix); this.setThemeBackgroundSize('120%')}}>Matrix</button>
+                        <button id="gradientBtn" className='themeBtn' onClick={() => {this.setTheme('gradient', 'red', gradient); this.setThemeBackgroundSize('120%')}}>Gradient</button>
                         <button id="more" className='themeBtn' onClick={(e) =>{e.target.classList.add('closed'); document.getElementById('tbwa').classList.remove('closed')} }>More...</button>
                         <button id="tbwa" className='themeBtn closed' onClick={() => {this.setTheme('bad', 'bisque', sean); this.setThemeBackgroundSize('50%')}}>TBWA</button>
                     </div>
