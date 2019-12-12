@@ -11,6 +11,11 @@
     color: #000;
 }
 
+.matrix .aboutAppContainer {
+    font-size: 12px;
+    line-height: 25px;
+}
+
 .matrix .app .topBar button {
     background-color: #0f9100;
 }
@@ -34,6 +39,10 @@
     background-color: #00FF41;
     color: #000;
     border-bottom: 2px solid #000000;
+}
+
+.matrix a {
+    color: #00FF41;
 }
 
 .matrix .aboutName {
