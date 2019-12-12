@@ -12,7 +12,6 @@ import TopCat from './Apps/TopCat/TopCat'
 import Calculator from './Apps/Calculator/Calcualtor'
 import Cows from "./Apps/Cows/Cows";
 import Codepen from "./Apps/Codepen/Codepen"
-import Tetris from "./Apps/Tetris/Tetris"
 
 class Desktop extends Component {
     constructor(props) {
@@ -60,7 +59,6 @@ class Desktop extends Component {
                 <Cows name='Cows' desktopState={desktopState}/>
                 <Codepen name='Codepen' desktopState={desktopState}/>
                 <Calculator name="Calculator" desktopState={desktopState}/>
-                <Tetris name="Tetris" desktopState={desktopState}/>
                 <Nyan name="TBWA" desktopState={desktopState}/>
                 <Revelations name="TBWA" desktopState={desktopState}/>
                 <ThemesApp name="Themes" desktopState={desktopState}/>
