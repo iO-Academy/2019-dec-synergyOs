@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './AppList.css'
 import './AppList-bad.css'
 
@@ -10,6 +10,7 @@ import TopCatIcon from '../../res/icons/cat.png'
 import CalculatorIcon from '../../res/icons/calculator.png'
 import ParachuteIcon from '../../res/icons/parachute.png'
 import CodepenIcon from '../../res/icons/codepen.png'
+import TetrisIcon from '../../res/icons/codepen.png'
 
 class AppList extends Component {
 
@@ -21,23 +22,27 @@ class AppList extends Component {
         TopCat: TopCatIcon,
         Calculator: CalculatorIcon,
         Cows: ParachuteIcon,
-        Codepen: CodepenIcon
+        Codepen: CodepenIcon,
+        Tetris: TetrisIcon
     }
 
     render() {
 
         const apps = Object.getOwnPropertyNames(this.props.appData.currentApps)
         const listItems = apps.map((appName) =>
-            <div id={`${appName}app`}className='AppContainer'>
-                <img className='AppIcon' src={this.appIcons[appName]} alt='icon' />
-                <li key onClick={() => {this.props.appData.openApp(appName); this.props.appData.activateApp(appName)}} key={appName} className='AppListItem'>{appName}</li>
+            <div id={`${appName}app`} className='AppContainer'>
+                <img className='AppIcon' src={this.appIcons[appName]} alt='icon'/>
+                <li key onClick={() => {
+                    this.props.appData.openApp(appName);
+                    this.props.appData.activateApp(appName)
+                }} key={appName} className='AppListItem'>{appName}</li>
             </div>
         )
 
         return (
             <div className="AppList">
                 <ul className='AppListInternal'>
-                    <li className='AppListHeader AppListItem' >My Apps</li>
+                    <li className='AppListHeader AppListItem'>My Apps</li>
                     {listItems}
                 </ul>
             </div>

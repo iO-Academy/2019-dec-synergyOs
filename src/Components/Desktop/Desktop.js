@@ -12,6 +12,7 @@ import TopCat from './Apps/TopCat/TopCat'
 import Calculator from './Apps/Calculator/Calcualtor'
 import Cows from "./Apps/Cows/Cows";
 import Codepen from "./Apps/Codepen/Codepen"
+import Tetris from "./Apps/Tetris/Tetris";
 
 class Desktop extends Component {
     constructor(props) {
