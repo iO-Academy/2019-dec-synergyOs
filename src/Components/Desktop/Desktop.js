@@ -66,7 +66,7 @@ class Desktop extends Component {
                 <SuperWriter name="SuperWriter" desktopState={desktopState} />
                 <SuperSpreadSheet name="SuperSpreadSheet" desktopState={desktopState} />
                 <SuperPresenter name="SuperPresenter" desktopState={desktopState} />
-                <SuperDraw name="SuperDraw" desktopState={desktopState} />s
+                <SuperDraw name="SuperDraw" desktopState={desktopState} />
                 <Nyan name="TBWA" desktopState={desktopState}/>
                 <Revelations name="TBWA" desktopState={desktopState}/>
                 <ThemesApp name="Themes" desktopState={desktopState}/>
