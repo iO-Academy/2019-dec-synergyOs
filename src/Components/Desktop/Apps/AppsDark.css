@@ -21,6 +21,11 @@ cursor: url(http://cur.cursors-4u.net/cursors/cur-6/cur588.cur), auto !important
     font-size: 15px;
 }
 
+.dark #newgif {
+    background-color: #4f4f75;
+    color: #fff;
+}
+
 .AppContainer:hover {
     background-color: #9c9c9c;
     color: #000;

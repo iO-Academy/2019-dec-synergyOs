@@ -10,3 +10,8 @@
 .gradient .app .topBar button {
     background-color: rgb(255, 66, 59);
 }
+
+.gradient #newgif {
+    background-color: #A2A3EC;
+    color: #000;
+}

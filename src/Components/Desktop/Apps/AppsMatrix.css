@@ -30,6 +30,11 @@
     font-size: 15px;
 }
 
+.matrix #newgif {
+    background-color: #000;
+    color: #00FF41;
+}
+
 .matrix:hover {
     background-color: #9c9c9c;
     color: #000;
