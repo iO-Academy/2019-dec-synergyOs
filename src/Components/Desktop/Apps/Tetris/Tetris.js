@@ -48,6 +48,7 @@ class Tetris extends React.Component {
     render(){
 
         let appMinWidths = {minWidth: '100px', minHeight: '100px'}
+        let tetrisSize = {width:'250px', height:'500px'}
 
         return (
             <div onClick={this.activateApp} id={this.state.name} className={'app ' + this.state.visibility}
@@ -65,7 +66,7 @@ class Tetris extends React.Component {
                 </div>
 
                 <div className="app-content aboutAppContainer" style={appMinWidths}>
-                    <div className="game" style="width:250px; height:500px;">
+                    <div className="game" style={tetrisSize}>
                         <script src="jquery.js"></script>
                         <script src="blockrain.js"></script>
                         <script>
