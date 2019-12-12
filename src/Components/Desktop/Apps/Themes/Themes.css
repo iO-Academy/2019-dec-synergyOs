@@ -42,6 +42,7 @@
 }
 
 #gradientBtn {
+    font-family: 'pro';
     background: linear-gradient(to right, rgb(51, 51, 255), rgb(107, 199, 230)); 
     color: white;
 }
