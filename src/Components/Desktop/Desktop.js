@@ -9,7 +9,7 @@ import Music from './Apps/Music/Music'
 import Nyan from './Apps/Nyan/Nyan'
 import Revelations from './Apps/Revelations/Revelations'
 import TopCat from './Apps/TopCat/TopCat'
-import Calculator from './Apps/Calculator/Calcualtor'
+import Calculator from './Apps/Calculator/Calculator'
 import Cows from "./Apps/Cows/Cows";
 import Codepen from "./Apps/Codepen/Codepen"
 import SuperSpreadSheet from './Apps/Office/SuperSpreadSheet/SuperSpreadSheet'
@@ -55,7 +55,7 @@ class Desktop extends Component {
 
         console.log(this.styles.backgroundSize)
         return (
-            <div  scroll="no" className='desktop closed' style={this.styles}>
+            <div scroll="no" className='desktop closed' style={this.styles}>
                 <AboutApp name="About" desktopState={desktopState}/>
                 <GiphyApp name="Giphy" desktopState={desktopState}/>
                 <Music name="Music" desktopState={desktopState}/>
@@ -63,16 +63,16 @@ class Desktop extends Component {
                 <Cows name='Cows' desktopState={desktopState}/>
                 <Codepen name='Codepen' desktopState={desktopState}/>
                 <Calculator name="Calculator" desktopState={desktopState}/>
-                <SuperWriter name="SuperWriter" desktopState={desktopState} />
-                <SuperSpreadSheet name="SuperSpreadSheet" desktopState={desktopState} />
-                <SuperPresenter name="SuperPresenter" desktopState={desktopState} />
-                <SuperDraw name="SuperDraw" desktopState={desktopState} />
+                <SuperWriter name="SuperWriter" desktopState={desktopState}/>
+                <SuperSpreadSheet name="SuperSpreadSheet" desktopState={desktopState}/>
+                <SuperPresenter name="SuperPresenter" desktopState={desktopState}/>
+                <SuperDraw name="SuperDraw" desktopState={desktopState}/>
                 <Nyan name="TBWA" desktopState={desktopState}/>
                 <Revelations name="TBWA" desktopState={desktopState}/>
                 <ThemesApp name="Themes" desktopState={desktopState}/>
                 <AppList appData={desktopState}/>
             </div>
-            
+
         )
     }
 }
